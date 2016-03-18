@@ -15,6 +15,10 @@
 		968597951C9C0634003E9D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968597931C9C0634003E9D96 /* LaunchScreen.storyboard */; };
 		968597A01C9C0634003E9D96 /* MinnieJasonWeddingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9685979F1C9C0634003E9D96 /* MinnieJasonWeddingTests.m */; };
 		968597AB1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597AA1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m */; };
+		96EB9D5F1C9C18FB006E9222 /* 一家餐廳.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */; };
+		96EB9D601C9C18FB006E9222 /* 儷宴會館.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */; };
+		96EB9D661C9C1C6B006E9222 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D651C9C1C6B006E9222 /* appIcon.png */; };
+		96EB9D681C9C1D30006E9222 /* launchScreen.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D671C9C1D30006E9222 /* launchScreen.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		968597A61C9C0634003E9D96 /* MinnieJasonWeddingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinnieJasonWeddingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968597AA1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinnieJasonWeddingUITests.m; sourceTree = "<group>"; };
 		968597AC1C9C0634003E9D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "一家餐廳.jpg"; sourceTree = "<group>"; };
+		96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "儷宴會館.jpg"; sourceTree = "<group>"; };
+		96EB9D651C9C1C6B006E9222 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
+		96EB9D671C9C1D30006E9222 /* launchScreen.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchScreen.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		968597841C9C0634003E9D96 /* MinnieJasonWedding */ = {
 			isa = PBXGroup;
 			children = (
+				96EB9D5C1C9C18FB006E9222 /* image */,
 				968597881C9C0634003E9D96 /* AppDelegate.h */,
 				968597891C9C0634003E9D96 /* AppDelegate.m */,
 				9685978B1C9C0634003E9D96 /* ViewController.h */,
@@ -139,6 +148,17 @@
 			);
 			path = MinnieJasonWeddingUITests;
 			sourceTree = "<group>";
+		};
+		96EB9D5C1C9C18FB006E9222 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				96EB9D671C9C1D30006E9222 /* launchScreen.JPG */,
+				96EB9D651C9C1C6B006E9222 /* appIcon.png */,
+				96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */,
+				96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */,
+			);
+			path = image;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -244,6 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EB9D5F1C9C18FB006E9222 /* 一家餐廳.jpg in Resources */,
+				96EB9D601C9C18FB006E9222 /* 儷宴會館.jpg in Resources */,
+				96EB9D681C9C1D30006E9222 /* launchScreen.JPG in Resources */,
+				96EB9D661C9C1C6B006E9222 /* appIcon.png in Resources */,
 				968597951C9C0634003E9D96 /* LaunchScreen.storyboard in Resources */,
 				968597921C9C0634003E9D96 /* Assets.xcassets in Resources */,
 				968597901C9C0634003E9D96 /* Main.storyboard in Resources */,

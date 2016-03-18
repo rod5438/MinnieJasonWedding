@@ -89,11 +89,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="儷宴會館.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4Eo-Sm-DWT">
+                                <rect key="frame" x="40" y="267" width="240" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Eo-Sm-DWT" secondAttribute="height" multiplier="120:89" id="gkf-lI-aWl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lGx-Kk-nOE" firstAttribute="width" secondItem="lFn-gM-IxB" secondAttribute="height" multiplier="40:71" id="agU-oI-Eiq"/>
-                            <constraint firstItem="lGx-Kk-nOE" firstAttribute="width" secondItem="lFn-gM-IxB" secondAttribute="width" id="bQu-Nx-lVO"/>
+                            <constraint firstItem="lGx-Kk-nOE" firstAttribute="width" secondItem="lFn-gM-IxB" secondAttribute="width" id="4fZ-hJ-xAv"/>
+                            <constraint firstItem="4Eo-Sm-DWT" firstAttribute="centerX" secondItem="lFn-gM-IxB" secondAttribute="centerX" id="JNe-Ln-iDy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="台北婚禮資訊" id="gfi-Fn-KQo">
@@ -125,11 +131,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="一家餐廳.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-bq-WNw">
+                                <rect key="frame" x="40" y="267" width="240" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZYb-bq-WNw" secondAttribute="height" multiplier="120:89" id="lk2-wS-j3N"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kOS-a0-Ljv" firstAttribute="width" secondItem="MGC-2K-esf" secondAttribute="height" multiplier="40:71" id="oWX-re-ADR"/>
-                            <constraint firstItem="kOS-a0-Ljv" firstAttribute="width" secondItem="MGC-2K-esf" secondAttribute="width" id="yBA-mh-P9A"/>
+                            <constraint firstItem="ZYb-bq-WNw" firstAttribute="centerX" secondItem="MGC-2K-esf" secondAttribute="centerX" id="a8i-Uv-cZp"/>
+                            <constraint firstItem="kOS-a0-Ljv" firstAttribute="width" secondItem="MGC-2K-esf" secondAttribute="width" id="hCL-e1-w0A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="台東訂婚資訊" id="gp4-Wo-Yam">
@@ -161,4 +173,8 @@
             <point key="canvasLocation" x="-926" y="353"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="一家餐廳.jpg" width="480" height="360"/>
+        <image name="儷宴會館.jpg" width="600" height="399"/>
+    </resources>
 </document>
