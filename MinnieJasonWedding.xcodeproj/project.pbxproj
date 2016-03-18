@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		968597871C9C0634003E9D96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597861C9C0634003E9D96 /* main.m */; };
+		9685978A1C9C0634003E9D96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597891C9C0634003E9D96 /* AppDelegate.m */; };
+		9685978D1C9C0634003E9D96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9685978C1C9C0634003E9D96 /* ViewController.m */; };
+		968597901C9C0634003E9D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9685978E1C9C0634003E9D96 /* Main.storyboard */; };
+		968597921C9C0634003E9D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968597911C9C0634003E9D96 /* Assets.xcassets */; };
+		968597951C9C0634003E9D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968597931C9C0634003E9D96 /* LaunchScreen.storyboard */; };
+		968597A01C9C0634003E9D96 /* MinnieJasonWeddingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9685979F1C9C0634003E9D96 /* MinnieJasonWeddingTests.m */; };
+		968597AB1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597AA1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9685979C1C9C0634003E9D96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9685977A1C9C0634003E9D96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 968597811C9C0634003E9D96;
+			remoteInfo = MinnieJasonWedding;
+		};
+		968597A71C9C0634003E9D96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9685977A1C9C0634003E9D96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 968597811C9C0634003E9D96;
+			remoteInfo = MinnieJasonWedding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		968597821C9C0634003E9D96 /* MinnieJasonWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinnieJasonWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		968597861C9C0634003E9D96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		968597881C9C0634003E9D96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		968597891C9C0634003E9D96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9685978B1C9C0634003E9D96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9685978C1C9C0634003E9D96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9685978F1C9C0634003E9D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		968597911C9C0634003E9D96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		968597941C9C0634003E9D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		968597961C9C0634003E9D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9685979B1C9C0634003E9D96 /* MinnieJasonWeddingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinnieJasonWeddingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9685979F1C9C0634003E9D96 /* MinnieJasonWeddingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinnieJasonWeddingTests.m; sourceTree = "<group>"; };
+		968597A11C9C0634003E9D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968597A61C9C0634003E9D96 /* MinnieJasonWeddingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinnieJasonWeddingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		968597AA1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinnieJasonWeddingUITests.m; sourceTree = "<group>"; };
+		968597AC1C9C0634003E9D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9685977F1C9C0634003E9D96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968597981C9C0634003E9D96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968597A31C9C0634003E9D96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		968597791C9C0634003E9D96 = {
+			isa = PBXGroup;
+			children = (
+				968597841C9C0634003E9D96 /* MinnieJasonWedding */,
+				9685979E1C9C0634003E9D96 /* MinnieJasonWeddingTests */,
+				968597A91C9C0634003E9D96 /* MinnieJasonWeddingUITests */,
+				968597831C9C0634003E9D96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		968597831C9C0634003E9D96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				968597821C9C0634003E9D96 /* MinnieJasonWedding.app */,
+				9685979B1C9C0634003E9D96 /* MinnieJasonWeddingTests.xctest */,
+				968597A61C9C0634003E9D96 /* MinnieJasonWeddingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		968597841C9C0634003E9D96 /* MinnieJasonWedding */ = {
+			isa = PBXGroup;
+			children = (
+				968597881C9C0634003E9D96 /* AppDelegate.h */,
+				968597891C9C0634003E9D96 /* AppDelegate.m */,
+				9685978B1C9C0634003E9D96 /* ViewController.h */,
+				9685978C1C9C0634003E9D96 /* ViewController.m */,
+				9685978E1C9C0634003E9D96 /* Main.storyboard */,
+				968597911C9C0634003E9D96 /* Assets.xcassets */,
+				968597931C9C0634003E9D96 /* LaunchScreen.storyboard */,
+				968597961C9C0634003E9D96 /* Info.plist */,
+				968597851C9C0634003E9D96 /* Supporting Files */,
+			);
+			path = MinnieJasonWedding;
+			sourceTree = "<group>";
+		};
+		968597851C9C0634003E9D96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				968597861C9C0634003E9D96 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9685979E1C9C0634003E9D96 /* MinnieJasonWeddingTests */ = {
+			isa = PBXGroup;
+			children = (
+				9685979F1C9C0634003E9D96 /* MinnieJasonWeddingTests.m */,
+				968597A11C9C0634003E9D96 /* Info.plist */,
+			);
+			path = MinnieJasonWeddingTests;
+			sourceTree = "<group>";
+		};
+		968597A91C9C0634003E9D96 /* MinnieJasonWeddingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				968597AA1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m */,
+				968597AC1C9C0634003E9D96 /* Info.plist */,
+			);
+			path = MinnieJasonWeddingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		968597811C9C0634003E9D96 /* MinnieJasonWedding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968597AF1C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWedding" */;
+			buildPhases = (
+				9685977E1C9C0634003E9D96 /* Sources */,
+				9685977F1C9C0634003E9D96 /* Frameworks */,
+				968597801C9C0634003E9D96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MinnieJasonWedding;
+			productName = MinnieJasonWedding;
+			productReference = 968597821C9C0634003E9D96 /* MinnieJasonWedding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9685979A1C9C0634003E9D96 /* MinnieJasonWeddingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968597B21C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWeddingTests" */;
+			buildPhases = (
+				968597971C9C0634003E9D96 /* Sources */,
+				968597981C9C0634003E9D96 /* Frameworks */,
+				968597991C9C0634003E9D96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9685979D1C9C0634003E9D96 /* PBXTargetDependency */,
+			);
+			name = MinnieJasonWeddingTests;
+			productName = MinnieJasonWeddingTests;
+			productReference = 9685979B1C9C0634003E9D96 /* MinnieJasonWeddingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		968597A51C9C0634003E9D96 /* MinnieJasonWeddingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 968597B51C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWeddingUITests" */;
+			buildPhases = (
+				968597A21C9C0634003E9D96 /* Sources */,
+				968597A31C9C0634003E9D96 /* Frameworks */,
+				968597A41C9C0634003E9D96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				968597A81C9C0634003E9D96 /* PBXTargetDependency */,
+			);
+			name = MinnieJasonWeddingUITests;
+			productName = MinnieJasonWeddingUITests;
+			productReference = 968597A61C9C0634003E9D96 /* MinnieJasonWeddingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9685977A1C9C0634003E9D96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jason Wu";
+				TargetAttributes = {
+					968597811C9C0634003E9D96 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					9685979A1C9C0634003E9D96 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 968597811C9C0634003E9D96;
+					};
+					968597A51C9C0634003E9D96 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 968597811C9C0634003E9D96;
+					};
+				};
+			};
+			buildConfigurationList = 9685977D1C9C0634003E9D96 /* Build configuration list for PBXProject "MinnieJasonWedding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 968597791C9C0634003E9D96;
+			productRefGroup = 968597831C9C0634003E9D96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				968597811C9C0634003E9D96 /* MinnieJasonWedding */,
+				9685979A1C9C0634003E9D96 /* MinnieJasonWeddingTests */,
+				968597A51C9C0634003E9D96 /* MinnieJasonWeddingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		968597801C9C0634003E9D96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968597951C9C0634003E9D96 /* LaunchScreen.storyboard in Resources */,
+				968597921C9C0634003E9D96 /* Assets.xcassets in Resources */,
+				968597901C9C0634003E9D96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968597991C9C0634003E9D96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968597A41C9C0634003E9D96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9685977E1C9C0634003E9D96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9685978D1C9C0634003E9D96 /* ViewController.m in Sources */,
+				9685978A1C9C0634003E9D96 /* AppDelegate.m in Sources */,
+				968597871C9C0634003E9D96 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968597971C9C0634003E9D96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968597A01C9C0634003E9D96 /* MinnieJasonWeddingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		968597A21C9C0634003E9D96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968597AB1C9C0634003E9D96 /* MinnieJasonWeddingUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9685979D1C9C0634003E9D96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 968597811C9C0634003E9D96 /* MinnieJasonWedding */;
+			targetProxy = 9685979C1C9C0634003E9D96 /* PBXContainerItemProxy */;
+		};
+		968597A81C9C0634003E9D96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 968597811C9C0634003E9D96 /* MinnieJasonWedding */;
+			targetProxy = 968597A71C9C0634003E9D96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9685978E1C9C0634003E9D96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9685978F1C9C0634003E9D96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		968597931C9C0634003E9D96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				968597941C9C0634003E9D96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		968597AD1C9C0634003E9D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		968597AE1C9C0634003E9D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		968597B01C9C0634003E9D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MinnieJasonWedding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jason.MinnieJasonWedding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		968597B11C9C0634003E9D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MinnieJasonWedding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jason.MinnieJasonWedding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		968597B31C9C0634003E9D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MinnieJasonWeddingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jason.MinnieJasonWeddingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinnieJasonWedding.app/MinnieJasonWedding";
+			};
+			name = Debug;
+		};
+		968597B41C9C0634003E9D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MinnieJasonWeddingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jason.MinnieJasonWeddingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MinnieJasonWedding.app/MinnieJasonWedding";
+			};
+			name = Release;
+		};
+		968597B61C9C0634003E9D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MinnieJasonWeddingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jason.MinnieJasonWeddingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MinnieJasonWedding;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		968597B71C9C0634003E9D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MinnieJasonWeddingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jason.MinnieJasonWeddingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MinnieJasonWedding;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9685977D1C9C0634003E9D96 /* Build configuration list for PBXProject "MinnieJasonWedding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968597AD1C9C0634003E9D96 /* Debug */,
+				968597AE1C9C0634003E9D96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		968597AF1C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWedding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968597B01C9C0634003E9D96 /* Debug */,
+				968597B11C9C0634003E9D96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		968597B21C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWeddingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968597B31C9C0634003E9D96 /* Debug */,
+				968597B41C9C0634003E9D96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		968597B51C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWeddingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				968597B61C9C0634003E9D96 /* Debug */,
+				968597B71C9C0634003E9D96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9685977A1C9C0634003E9D96 /* Project object */;
+}
