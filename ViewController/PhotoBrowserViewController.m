@@ -7,8 +7,9 @@
 //
 
 #import "PhotoBrowserViewController.h"
+#import "MWPhotoBrowserPrivate.h"
 
-@interface PhotoBrowserViewController () <MWPhotoBrowserDelegate>
+@interface PhotoBrowserViewController () <MWPhotoBrowserDelegate, UIActivityItemSource>
 
 @property (nonatomic) NSArray *allImageNameArray;
 
@@ -50,6 +51,33 @@
     NSString *imageName = self.allImageNameArray[index];
     UIImage *image = [UIImage imageNamed:imageName];
     return [[MWPhoto alloc] initWithImage:image];
+}
+
+- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser actionButtonPressedForPhotoAtIndex:(NSUInteger)index
+{
+    id <MWPhoto> photo = [self photoAtIndex:index];
+    if ([self numberOfPhotos] > 0 && [photo underlyingImage]) {
+        // Show activity view controller
+        NSMutableArray *items = [NSMutableArray arrayWithObject:[photo underlyingImage]];
+        if (photo.caption) {
+            [items addObject:photo.caption];
+        }
+        [items addObject:@"Minnie & jason's wedding"];
+        self.activityViewController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+
+        
+        // Show
+        typeof(self) __weak weakSelf = self;
+        [self.activityViewController setCompletionHandler:^(NSString *activityType, BOOL completed) {
+            weakSelf.activityViewController = nil;
+            [weakSelf hideControlsAfterDelay];
+        }];
+        // iOS 8 - Set the Anchor Point for the popover
+        if ([[[UIDevice currentDevice] systemVersion] compare:@"8" options:NSNumericSearch] != NSOrderedAscending) {
+            //self.activityViewController.popoverPresentationController.barButtonItem = _actionButton;
+        }
+        [self presentViewController:self.activityViewController animated:YES completion:nil];
+    }
 }
 
 /*
