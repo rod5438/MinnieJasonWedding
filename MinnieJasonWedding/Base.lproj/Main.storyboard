@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="-634" y="334"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Browser View Controller-->
         <scene sceneID="iOc-BM-fTe">
             <objects>
-                <viewController id="GiR-I8-tcq" sceneMemberID="viewController">
+                <viewController id="GiR-I8-tcq" customClass="PhotoBrowserViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yiO-zG-vYe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
