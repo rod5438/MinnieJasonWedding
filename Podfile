@@ -5,6 +5,7 @@
 
 target 'MinnieJasonWedding' do
 	pod 'ReactiveCocoa'
+	pod "MWPhotoBrowser"
 end
 
 target 'MinnieJasonWeddingTests' do
