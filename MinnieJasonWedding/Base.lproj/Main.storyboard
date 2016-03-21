@@ -5,73 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--婚禮看板-->
-        <scene sceneID="aaa-Ib-mzE">
-            <objects>
-                <tableViewController id="mNb-iR-svl" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ov6-DT-ZCr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="5k5-gA-ggD">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="nS8-mP-fro">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nS8-mP-fro" id="CmZ-Bw-rNk">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台北婚禮資訊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yQI-lr-x7s">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="BB3-89-1QE" kind="push" id="hqm-QO-fj0"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="TSd-sy-Uh0">
-                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TSd-sy-Uh0" id="Vjg-pr-RwD">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台東訂婚資訊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JYm-HQ-DgK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="CfP-50-KNw" kind="push" id="OaP-Sl-Sml"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="mNb-iR-svl" id="nyR-d9-63T"/>
-                            <outlet property="delegate" destination="mNb-iR-svl" id="etI-8N-Wmv"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="婚禮看板" id="byM-D2-YV4"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="568"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Onx-3O-Dmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-263.46666666666664" y="334.17333333333335"/>
-        </scene>
         <!--台北婚禮資訊-->
         <scene sceneID="Ra2-sh-RVU">
             <objects>
@@ -103,7 +36,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ka-yY-Z1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Item" id="JZu-eb-oRY"/>
             </objects>
-            <point key="canvasLocation" x="213" y="26"/>
+            <point key="canvasLocation" x="-219" y="-347"/>
+        </scene>
+        <!--婚禮-->
+        <scene sceneID="5yt-QR-UIT">
+            <objects>
+                <viewController id="Chb-57-TF5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vYW-jb-pNC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="fLd-ie-hKs">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zlc-Py-EBn">
+                                        <rect key="frame" x="34" y="299" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="婚紗畫廊"/>
+                                        <connections>
+                                            <segue destination="GiR-I8-tcq" kind="push" id="clg-ZJ-Hhj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AIf-II-w0Q">
+                                        <rect key="frame" x="162" y="299" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="趣味合照"/>
+                                        <connections>
+                                            <segue destination="eJq-hQ-zwK" kind="push" id="pvj-nq-zeq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KNt-z4-MFj">
+                                        <rect key="frame" x="162" y="55" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="台東婚禮"/>
+                                        <connections>
+                                            <segue destination="CfP-50-KNw" kind="push" id="yiG-lY-ypc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T5s-cV-82Z">
+                                        <rect key="frame" x="34" y="55" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="台北婚禮"/>
+                                        <connections>
+                                            <segue destination="BB3-89-1QE" kind="push" id="31e-KD-Z5k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="婚禮" id="LMK-9m-ez9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ekd-Aw-9aS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="334"/>
         </scene>
         <!--台東訂婚資訊-->
         <scene sceneID="CQX-Bb-acp">
@@ -135,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fD8-KS-hHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="676"/>
+            <point key="canvasLocation" x="247" y="9"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C4I-np-qVc">
@@ -148,12 +137,42 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="mNb-iR-svl" kind="relationship" relationship="rootViewController" id="epf-jt-vjL"/>
+                        <segue destination="Chb-57-TF5" kind="relationship" relationship="rootViewController" id="J0S-Kt-ZVy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV8-bW-rVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-634" y="334"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iOc-BM-fTe">
+            <objects>
+                <viewController id="GiR-I8-tcq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiO-zG-vYe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dNr-z3-T2s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djX-iQ-HAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="1025"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eKq-3q-V7C">
+            <objects>
+                <viewController id="eJq-hQ-zwK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jV7-sn-gXV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hQy-bB-PXK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjS-FM-P88" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247" y="684"/>
         </scene>
     </scenes>
     <resources>
