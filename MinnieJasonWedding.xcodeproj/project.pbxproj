@@ -93,6 +93,8 @@
 		96CB24D51CA05AE900949526 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D21CA05AE900949526 /* Default-568h@2x.png */; };
 		96CB24D61CA05AE900949526 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D31CA05AE900949526 /* Default.png */; };
 		96CB24D71CA05AE900949526 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D41CA05AE900949526 /* Default@2x.png */; };
+		96CB24DD1CA05D5A00949526 /* Main~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24DB1CA05D5A00949526 /* Main~ipad.storyboard */; };
+		96CB24E01CA05F9100949526 /* LaunchScreen~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24DE1CA05F9100949526 /* LaunchScreen~ipad.storyboard */; };
 		96EB9D5F1C9C18FB006E9222 /* 一家餐廳.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */; };
 		96EB9D601C9C18FB006E9222 /* 儷宴會館.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */; };
 /* End PBXBuildFile section */
@@ -212,6 +214,8 @@
 		96CB24D21CA05AE900949526 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		96CB24D31CA05AE900949526 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		96CB24D41CA05AE900949526 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		96CB24DC1CA05D5A00949526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main~ipad.storyboard"; sourceTree = "<group>"; };
+		96CB24DF1CA05F9100949526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/LaunchScreen~ipad.storyboard"; sourceTree = "<group>"; };
 		96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "一家餐廳.jpg"; sourceTree = "<group>"; };
 		96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "儷宴會館.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -292,8 +296,10 @@
 				9685978B1C9C0634003E9D96 /* ViewController.h */,
 				9685978C1C9C0634003E9D96 /* ViewController.m */,
 				9685978E1C9C0634003E9D96 /* Main.storyboard */,
+				96CB24DB1CA05D5A00949526 /* Main~ipad.storyboard */,
 				968597911C9C0634003E9D96 /* Assets.xcassets */,
 				968597931C9C0634003E9D96 /* LaunchScreen.storyboard */,
+				96CB24DE1CA05F9100949526 /* LaunchScreen~ipad.storyboard */,
 				968597961C9C0634003E9D96 /* Info.plist */,
 				968597851C9C0634003E9D96 /* Supporting Files */,
 			);
@@ -581,6 +587,7 @@
 				96CB24B61C9FF9F800949526 /* DS_18650.jpg in Resources */,
 				96CB24BD1C9FF9F800949526 /* DS_18739.jpg in Resources */,
 				96CB24A21C9FF9F800949526 /* DS_18532.jpg in Resources */,
+				96CB24DD1CA05D5A00949526 /* Main~ipad.storyboard in Resources */,
 				96CB24C81CA0555200949526 /* appIcon@3x.png in Resources */,
 				96CB24B91C9FF9F800949526 /* DS_18699.jpg in Resources */,
 				96CB24AA1C9FF9F800949526 /* DS_18576.jpg in Resources */,
@@ -606,6 +613,7 @@
 				96CB24B81C9FF9F800949526 /* DS_18698.jpg in Resources */,
 				96CB24881C9FF9F800949526 /* DS_18372.jpg in Resources */,
 				968597921C9C0634003E9D96 /* Assets.xcassets in Resources */,
+				96CB24E01CA05F9100949526 /* LaunchScreen~ipad.storyboard in Resources */,
 				96CB24961C9FF9F800949526 /* DS_18468.jpg in Resources */,
 				96CB24811C9FF9F800949526 /* DS_18334.jpg in Resources */,
 				96CB24851C9FF9F800949526 /* DS_18358.jpg in Resources */,
@@ -750,6 +758,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		96CB24DB1CA05D5A00949526 /* Main~ipad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CB24DC1CA05D5A00949526 /* Base */,
+			);
+			name = "Main~ipad.storyboard";
+			sourceTree = "<group>";
+		};
+		96CB24DE1CA05F9100949526 /* LaunchScreen~ipad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CB24DF1CA05F9100949526 /* Base */,
+			);
+			name = "LaunchScreen~ipad.storyboard";
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -846,6 +870,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MinnieJasonWedding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -860,6 +885,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MinnieJasonWedding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
