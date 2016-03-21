@@ -90,6 +90,9 @@
 		96CB24CC1CA055F200949526 /* appIcon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24CA1CA055F200949526 /* appIcon~ipad.png */; };
 		96CB24CE1CA0578C00949526 /* appIconBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24CD1CA0578C00949526 /* appIconBig@2x.png */; };
 		96CB24D01CA0589900949526 /* launchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24CF1CA0589900949526 /* launchScreen.png */; };
+		96CB24D51CA05AE900949526 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D21CA05AE900949526 /* Default-568h@2x.png */; };
+		96CB24D61CA05AE900949526 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D31CA05AE900949526 /* Default.png */; };
+		96CB24D71CA05AE900949526 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D41CA05AE900949526 /* Default@2x.png */; };
 		96EB9D5F1C9C18FB006E9222 /* 一家餐廳.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */; };
 		96EB9D601C9C18FB006E9222 /* 儷宴會館.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */; };
 /* End PBXBuildFile section */
@@ -206,6 +209,9 @@
 		96CB24CA1CA055F200949526 /* appIcon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon~ipad.png"; sourceTree = "<group>"; };
 		96CB24CD1CA0578C00949526 /* appIconBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIconBig@2x.png"; sourceTree = "<group>"; };
 		96CB24CF1CA0589900949526 /* launchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen.png; sourceTree = "<group>"; };
+		96CB24D21CA05AE900949526 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		96CB24D31CA05AE900949526 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		96CB24D41CA05AE900949526 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "一家餐廳.jpg"; sourceTree = "<group>"; };
 		96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "儷宴會館.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -278,6 +284,7 @@
 		968597841C9C0634003E9D96 /* MinnieJasonWedding */ = {
 			isa = PBXGroup;
 			children = (
+				96CB24D11CA05AE900949526 /* Resource */,
 				967B0E5F1C9FDE0E0010C612 /* ViewController */,
 				96EB9D5C1C9C18FB006E9222 /* image */,
 				968597881C9C0634003E9D96 /* AppDelegate.h */,
@@ -389,6 +396,16 @@
 				96CB247F1C9FF9F800949526 /* DS_18765.jpg */,
 			);
 			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		96CB24D11CA05AE900949526 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				96CB24D21CA05AE900949526 /* Default-568h@2x.png */,
+				96CB24D31CA05AE900949526 /* Default.png */,
+				96CB24D41CA05AE900949526 /* Default@2x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		96EB9D5C1C9C18FB006E9222 /* image */ = {
@@ -544,6 +561,7 @@
 				96CB243D1C9FF43100949526 /* PhotoBrowser in Resources */,
 				96CB248F1C9FF9F800949526 /* DS_18433.jpg in Resources */,
 				96CB24B31C9FF9F800949526 /* DS_18627.jpg in Resources */,
+				96CB24D61CA05AE900949526 /* Default.png in Resources */,
 				96CB24C71CA0555200949526 /* appIcon@2x.png in Resources */,
 				96CB24A11C9FF9F800949526 /* DS_18530.jpg in Resources */,
 				96CB248C1C9FF9F800949526 /* DS_18415.jpg in Resources */,
@@ -581,6 +599,8 @@
 				96CB24BB1C9FF9F800949526 /* DS_18726.jpg in Resources */,
 				96CB24A91C9FF9F800949526 /* DS_18575.jpg in Resources */,
 				96CB24AE1C9FF9F800949526 /* DS_18590.jpg in Resources */,
+				96CB24D71CA05AE900949526 /* Default@2x.png in Resources */,
+				96CB24D51CA05AE900949526 /* Default-568h@2x.png in Resources */,
 				96CB24A01C9FF9F800949526 /* DS_18527.jpg in Resources */,
 				96CB248A1C9FF9F800949526 /* DS_18380.jpg in Resources */,
 				96CB24B81C9FF9F800949526 /* DS_18698.jpg in Resources */,
