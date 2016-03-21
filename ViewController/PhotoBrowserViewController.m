@@ -8,8 +8,9 @@
 
 #import "PhotoBrowserViewController.h"
 #import "MWPhotoBrowserPrivate.h"
+#import "UIView+Toast.h"
 
-@interface PhotoBrowserViewController () <MWPhotoBrowserDelegate, UIActivityItemSource>
+@interface PhotoBrowserViewController () <MWPhotoBrowserDelegate>
 
 @property (nonatomic) NSArray *allImageNameArray;
 
@@ -71,6 +72,12 @@
         [self.activityViewController setCompletionHandler:^(NSString *activityType, BOOL completed) {
             weakSelf.activityViewController = nil;
             [weakSelf hideControlsAfterDelay];
+            if (completed) {
+                [weakSelf.view makeToast:@"已分享" duration:1.0f position:CSToastPositionCenter];
+            }
+            else {
+                [weakSelf.view makeToast:@"取消" duration:1.0f position:CSToastPositionCenter];
+            }
         }];
         // iOS 8 - Set the Anchor Point for the popover
         if ([[[UIDevice currentDevice] systemVersion] compare:@"8" options:NSNumericSearch] != NSOrderedAscending) {
