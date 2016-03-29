@@ -36,9 +36,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ka-yY-Z1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Item" id="JZu-eb-oRY"/>
             </objects>
-            <point key="canvasLocation" x="-219" y="-347"/>
+            <point key="canvasLocation" x="13" y="-340"/>
         </scene>
-        <!--婚禮-->
+        <!--網友婚禮-->
         <scene sceneID="5yt-QR-UIT">
             <objects>
                 <viewController id="Chb-57-TF5" sceneMemberID="viewController">
@@ -88,7 +88,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="婚禮" id="LMK-9m-ez9"/>
+                    <navigationItem key="navigationItem" title="網友婚禮" id="LMK-9m-ez9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekd-Aw-9aS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fD8-KS-hHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247" y="9"/>
+            <point key="canvasLocation" x="408" y="11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C4I-np-qVc">
@@ -137,14 +137,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Chb-57-TF5" kind="relationship" relationship="rootViewController" id="J0S-Kt-ZVy"/>
+                        <segue destination="5kr-k8-3oo" kind="relationship" relationship="rootViewController" id="XdH-kp-G7e"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV8-bW-rVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-634" y="334"/>
+            <point key="canvasLocation" x="-1097" y="334"/>
         </scene>
-        <!--Photo Browser View Controller-->
+        <!--婚紗畫廊-->
         <scene sceneID="iOc-BM-fTe">
             <objects>
                 <viewController id="GiR-I8-tcq" customClass="PhotoBrowserViewController" sceneMemberID="viewController">
@@ -153,11 +153,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dNr-z3-T2s"/>
+                    <navigationItem key="navigationItem" title="婚紗畫廊" id="dNr-z3-T2s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djX-iQ-HAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-219" y="1025"/>
+            <point key="canvasLocation" x="44" y="1107"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eKq-3q-V7C">
@@ -172,7 +172,134 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjS-FM-P88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247" y="684"/>
+            <point key="canvasLocation" x="408" y="698"/>
+        </scene>
+        <!--婚紗公司-->
+        <scene sceneID="oED-be-0yj">
+            <objects>
+                <tableViewController id="TZA-oo-a3K" customClass="PhoneBookTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="I1Y-A5-S7N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="4c6-uZ-2fR" customClass="PhoneBookTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4c6-uZ-2fR" id="Jwl-Tf-TfV">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="亞太麗緻婚紗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vOg-2u-A0Q">
+                                            <rect key="frame" x="10" y="0.0" width="160" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-2761-6727" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NLd-6M-5Yk">
+                                            <rect key="frame" x="10" y="61" width="150" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="105台北市松山區八德路四段666號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2et-x3-3HQ">
+                                            <rect key="frame" x="10" y="27" width="310" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://apiwi.com/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ISS-En-6aU">
+                                            <rect key="frame" x="10" y="45" width="310" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S3z-AQ-jKC">
+                                            <rect key="frame" x="227" y="40" width="74" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="最愛"/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="adderessLabel" destination="2et-x3-3HQ" id="vaU-Jm-q1v"/>
+                                    <outlet property="phoneNumberLabel" destination="NLd-6M-5Yk" id="1TX-d8-sgc"/>
+                                    <outlet property="storeNameLabel" destination="vOg-2u-A0Q" id="t7c-5A-3cc"/>
+                                    <outlet property="webAddressLabel" destination="ISS-En-6aU" id="tFQ-Em-wHI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TZA-oo-a3K" id="Uf7-iP-iJi"/>
+                            <outlet property="delegate" destination="TZA-oo-a3K" id="cXg-yz-Jgu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="婚紗公司" id="mqE-2t-Erg">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="FB3-Bc-rPD"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaA-Zh-jIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-693" y="-323"/>
+        </scene>
+        <!--廠商目錄-->
+        <scene sceneID="crf-ci-Yyg">
+            <objects>
+                <viewController id="5kr-k8-3oo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMm-d0-68E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="G3a-Mr-y4n">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sy5-gB-bbN">
+                                        <rect key="frame" x="34" y="299" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="喜宴餐廳"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mEz-Qi-NyT">
+                                        <rect key="frame" x="162" y="299" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="喜帖印刷"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gno-Nt-wOw">
+                                        <rect key="frame" x="162" y="55" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="婚禮活動企劃"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7F4-L7-cUH">
+                                        <rect key="frame" x="34" y="55" width="120" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="婚紗公司"/>
+                                        <connections>
+                                            <segue destination="TZA-oo-a3K" kind="push" id="IC3-Gn-1Gg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p2m-kM-1T6">
+                                        <rect key="frame" x="123" y="441" width="74" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="網友婚禮"/>
+                                        <connections>
+                                            <segue destination="Chb-57-TF5" kind="push" id="Bkc-GW-T7C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="廠商目錄" id="7yp-DL-5F5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Huj-1Q-hWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-629" y="334"/>
         </scene>
     </scenes>
     <resources>

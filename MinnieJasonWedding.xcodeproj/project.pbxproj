@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2492989FB55827D890F5958C /* libPods-MinnieJasonWedding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */; };
+		964A61C21CA822A7004D9B7C /* PhoneBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */; };
 		967B0E621C9FDE440010C612 /* PhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967B0E611C9FDE440010C612 /* PhotoBrowserViewController.m */; };
 		968597871C9C0634003E9D96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597861C9C0634003E9D96 /* main.m */; };
 		9685978A1C9C0634003E9D96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597891C9C0634003E9D96 /* AppDelegate.m */; };
@@ -95,6 +96,9 @@
 		96CB24D71CA05AE900949526 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D41CA05AE900949526 /* Default@2x.png */; };
 		96CB24DD1CA05D5A00949526 /* Main~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24DB1CA05D5A00949526 /* Main~ipad.storyboard */; };
 		96CB24E01CA05F9100949526 /* LaunchScreen~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24DE1CA05F9100949526 /* LaunchScreen~ipad.storyboard */; };
+		96E302DA1CA7B98F002FAF82 /* PhoneBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302D91CA7B98F002FAF82 /* PhoneBookTableViewController.m */; };
+		96E302DF1CA7BB57002FAF82 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302DE1CA7BB57002FAF82 /* DataBaseManager.m */; };
+		96E302E31CA7BF32002FAF82 /* StoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302E21CA7BF32002FAF82 /* StoreData.m */; };
 		96EB9D5F1C9C18FB006E9222 /* 一家餐廳.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */; };
 		96EB9D601C9C18FB006E9222 /* 儷宴會館.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */; };
 /* End PBXBuildFile section */
@@ -120,6 +124,8 @@
 		336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MinnieJasonWedding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F425038A214AE0346ADF83 /* Pods-MinnieJasonWedding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.debug.xcconfig"; sourceTree = "<group>"; };
 		9030F55F0FD8385050D449F2 /* Pods-MinnieJasonWedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.release.xcconfig"; sourceTree = "<group>"; };
+		964A61C01CA822A7004D9B7C /* PhoneBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookTableViewCell.h; sourceTree = "<group>"; };
+		964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookTableViewCell.m; sourceTree = "<group>"; };
 		967B0E601C9FDE440010C612 /* PhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoBrowserViewController.h; path = ViewController/PhotoBrowserViewController.h; sourceTree = SOURCE_ROOT; };
 		967B0E611C9FDE440010C612 /* PhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoBrowserViewController.m; path = ViewController/PhotoBrowserViewController.m; sourceTree = SOURCE_ROOT; };
 		968597821C9C0634003E9D96 /* MinnieJasonWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinnieJasonWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +222,12 @@
 		96CB24D41CA05AE900949526 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		96CB24DC1CA05D5A00949526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main~ipad.storyboard"; sourceTree = "<group>"; };
 		96CB24DF1CA05F9100949526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/LaunchScreen~ipad.storyboard"; sourceTree = "<group>"; };
+		96E302D81CA7B98F002FAF82 /* PhoneBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneBookTableViewController.h; path = ViewController/PhoneBookTableViewController.h; sourceTree = SOURCE_ROOT; };
+		96E302D91CA7B98F002FAF82 /* PhoneBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneBookTableViewController.m; path = ViewController/PhoneBookTableViewController.m; sourceTree = SOURCE_ROOT; };
+		96E302DD1CA7BB57002FAF82 /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
+		96E302DE1CA7BB57002FAF82 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
+		96E302E11CA7BF32002FAF82 /* StoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreData.h; sourceTree = "<group>"; };
+		96E302E21CA7BF32002FAF82 /* StoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreData.m; sourceTree = "<group>"; };
 		96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "一家餐廳.jpg"; sourceTree = "<group>"; };
 		96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "儷宴會館.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,11 +266,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		964A61BF1CA8224E004D9B7C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				964A61C01CA822A7004D9B7C /* PhoneBookTableViewCell.h */,
+				964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		967B0E5F1C9FDE0E0010C612 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				967B0E601C9FDE440010C612 /* PhotoBrowserViewController.h */,
 				967B0E611C9FDE440010C612 /* PhotoBrowserViewController.m */,
+				96E302D81CA7B98F002FAF82 /* PhoneBookTableViewController.h */,
+				96E302D91CA7B98F002FAF82 /* PhoneBookTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -288,6 +311,8 @@
 		968597841C9C0634003E9D96 /* MinnieJasonWedding */ = {
 			isa = PBXGroup;
 			children = (
+				964A61BF1CA8224E004D9B7C /* Cell */,
+				96E302DC1CA7BB20002FAF82 /* DataBase */,
 				96CB24D11CA05AE900949526 /* Resource */,
 				967B0E5F1C9FDE0E0010C612 /* ViewController */,
 				96EB9D5C1C9C18FB006E9222 /* image */,
@@ -412,6 +437,17 @@
 				96CB24D41CA05AE900949526 /* Default@2x.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		96E302DC1CA7BB20002FAF82 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				96E302DD1CA7BB57002FAF82 /* DataBaseManager.h */,
+				96E302DE1CA7BB57002FAF82 /* DataBaseManager.m */,
+				96E302E11CA7BF32002FAF82 /* StoreData.h */,
+				96E302E21CA7BF32002FAF82 /* StoreData.m */,
+			);
+			name = DataBase;
 			sourceTree = "<group>";
 		};
 		96EB9D5C1C9C18FB006E9222 /* image */ = {
@@ -705,6 +741,10 @@
 			files = (
 				967B0E621C9FDE440010C612 /* PhotoBrowserViewController.m in Sources */,
 				9685978D1C9C0634003E9D96 /* ViewController.m in Sources */,
+				96E302E31CA7BF32002FAF82 /* StoreData.m in Sources */,
+				964A61C21CA822A7004D9B7C /* PhoneBookTableViewCell.m in Sources */,
+				96E302DF1CA7BB57002FAF82 /* DataBaseManager.m in Sources */,
+				96E302DA1CA7B98F002FAF82 /* PhoneBookTableViewController.m in Sources */,
 				9685978A1C9C0634003E9D96 /* AppDelegate.m in Sources */,
 				968597871C9C0634003E9D96 /* main.m in Sources */,
 			);
