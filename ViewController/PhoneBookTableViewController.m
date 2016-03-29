@@ -9,6 +9,7 @@
 #import "PhoneBookTableViewController.h"
 #import "PhoneBookTableViewCell.h"
 #import "DataBaseManager.h"
+#import "AddStoreDialogView.h"
 
 #define kHeaderCellHeight 30
 @interface PhoneBookTableViewController ()
@@ -16,6 +17,8 @@
 @property NSArray <StoreData *> *userData;
 @property NSArray <StoreData *> *buildInData;
 @property NSArray <StoreData *> *favoritesData;
+
+@property IBOutlet AddStoreDialogView *addStoreDialogView;
 
 @end
 
@@ -112,7 +115,15 @@
     return header;
 }
 
+- (IBAction)addUserStore:(id)sender
+{
+    [self.view addSubview:self.addStoreDialogView];
+}
 
+- (void)addStoreDialogCancel
+{
+    [self.addStoreDialogView removeFromSuperview];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

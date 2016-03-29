@@ -99,6 +99,7 @@
 		96E302DA1CA7B98F002FAF82 /* PhoneBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302D91CA7B98F002FAF82 /* PhoneBookTableViewController.m */; };
 		96E302DF1CA7BB57002FAF82 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302DE1CA7BB57002FAF82 /* DataBaseManager.m */; };
 		96E302E31CA7BF32002FAF82 /* StoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302E21CA7BF32002FAF82 /* StoreData.m */; };
+		96E751401CAA51DC00A62F1A /* AddStoreDialogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E7513F1CAA51DC00A62F1A /* AddStoreDialogView.m */; };
 		96EB9D5F1C9C18FB006E9222 /* 一家餐廳.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */; };
 		96EB9D601C9C18FB006E9222 /* 儷宴會館.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */; };
 /* End PBXBuildFile section */
@@ -228,6 +229,8 @@
 		96E302DE1CA7BB57002FAF82 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
 		96E302E11CA7BF32002FAF82 /* StoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreData.h; sourceTree = "<group>"; };
 		96E302E21CA7BF32002FAF82 /* StoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreData.m; sourceTree = "<group>"; };
+		96E7513E1CAA51DC00A62F1A /* AddStoreDialogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreDialogView.h; sourceTree = "<group>"; };
+		96E7513F1CAA51DC00A62F1A /* AddStoreDialogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreDialogView.m; sourceTree = "<group>"; };
 		96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "一家餐廳.jpg"; sourceTree = "<group>"; };
 		96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "儷宴會館.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +317,7 @@
 				964A61BF1CA8224E004D9B7C /* Cell */,
 				96E302DC1CA7BB20002FAF82 /* DataBase */,
 				96CB24D11CA05AE900949526 /* Resource */,
+				96E7513D1CAA518C00A62F1A /* ViewComponent */,
 				967B0E5F1C9FDE0E0010C612 /* ViewController */,
 				96EB9D5C1C9C18FB006E9222 /* image */,
 				968597881C9C0634003E9D96 /* AppDelegate.h */,
@@ -448,6 +452,15 @@
 				96E302E21CA7BF32002FAF82 /* StoreData.m */,
 			);
 			name = DataBase;
+			sourceTree = "<group>";
+		};
+		96E7513D1CAA518C00A62F1A /* ViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				96E7513E1CAA51DC00A62F1A /* AddStoreDialogView.h */,
+				96E7513F1CAA51DC00A62F1A /* AddStoreDialogView.m */,
+			);
+			name = ViewComponent;
 			sourceTree = "<group>";
 		};
 		96EB9D5C1C9C18FB006E9222 /* image */ = {
@@ -739,6 +752,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E751401CAA51DC00A62F1A /* AddStoreDialogView.m in Sources */,
 				967B0E621C9FDE440010C612 /* PhotoBrowserViewController.m in Sources */,
 				9685978D1C9C0634003E9D96 /* ViewController.m in Sources */,
 				96E302E31CA7BF32002FAF82 /* StoreData.m in Sources */,
