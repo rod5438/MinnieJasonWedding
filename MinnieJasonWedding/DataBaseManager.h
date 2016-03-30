@@ -14,5 +14,6 @@
 + (DataBaseManager *)sharedInstance;
 - (NSArray <StoreData *> *)loadBuildInDataWithType:(StoreType)type;
 - (NSArray <StoreData *> *)loadUserDataWithType:(StoreType)type;
+- (StoreData *)insertUserStoreDataWithStoreData:(NSDictionary <NSString*, NSString*> *)storeDataDictionary withType:(StoreType)type; // will return StoreID
 
 @end

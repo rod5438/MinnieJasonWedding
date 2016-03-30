@@ -11,11 +11,16 @@
 @protocol AddStoreDialogViewDelegate <NSObject>
 
 - (void)addStoreDialogCancel;
+- (void)addStoreDialogDoneWithStoreData:(NSDictionary <NSString*, NSString*> *)storeDataDictionary;
 
 @end
 
 @interface AddStoreDialogView : UIView
 
 @property (weak, nonatomic) IBOutlet id<AddStoreDialogViewDelegate> delegate;
+@property (nonatomic) IBOutlet UITextField *nameTextField;
+@property (nonatomic) IBOutlet UITextField *phoneTextField;
+@property (nonatomic) IBOutlet UITextField *addressTextField;
+@property (nonatomic) IBOutlet UITextField *webAddressTextField;
 
 @end

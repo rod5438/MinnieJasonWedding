@@ -124,6 +124,30 @@
 {
     [self.addStoreDialogView removeFromSuperview];
 }
+
+- (void)addStoreDialogDoneWithStoreData:(NSDictionary <NSString*, NSString*> *)storeDataDictionary;
+{
+    StoreData *storeData = [self addNewStoreDataToDBWithStoreData:storeDataDictionary];
+    [self addNewStoreDataModelWithStoreData:storeData];
+    [self addNewStoreDataToViewWithIndexPath:[NSIndexPath indexPathForRow:self.userData.count - 1 inSection:1]];
+}
+
+- (StoreData *)addNewStoreDataToDBWithStoreData:(NSDictionary *)storeData // data method
+{
+    StoreData *data = [[DataBaseManager sharedInstance] insertUserStoreDataWithStoreData:storeData withType:self.type];
+    return data;
+}
+
+- (void)addNewStoreDataModelWithStoreData:(StoreData *)storeData // model method
+{
+    self.userData = [self.userData arrayByAddingObject:storeData];
+}
+
+- (void)addNewStoreDataToViewWithIndexPath:(NSIndexPath *)indexPath // view method
+{
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
