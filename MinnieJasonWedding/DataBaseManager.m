@@ -135,6 +135,19 @@
     [[NSUserDefaults standardUserDefaults] setObject:@([self numberOfUserData] + 1) forKey:NUMBER_OF_USER_DATA];
 }
 
+- (void)updateUserStoreDataWithStoreData:(StoreData *)storeData
+{
+    NSMutableDictionary *storeDataDictionary = [[NSMutableDictionary alloc] init];
+    storeDataDictionary[kStoreName] = storeData.storeName;
+    storeDataDictionary[kPhoneNumber] = storeData.phoneNumber;
+    storeDataDictionary[kAddress] = storeData.address;
+    storeDataDictionary[kWebAddress] = storeData.webAddress;
+    storeDataDictionary[kType] = @(storeData.type);
+    storeDataDictionary[kIsFavorites] = @(storeData.isFavorites);
+    storeDataDictionary[kStoreID] = storeData.storeID;
+    [[NSUserDefaults standardUserDefaults] setObject:storeDataDictionary forKey:storeData.storeID];
+}
+
 - (NSString *)getKeyForUserStoreDataIndex:(NSInteger)index
 {
     return [NSString stringWithFormat:@"UserStore_%ld",index];

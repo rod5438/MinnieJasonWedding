@@ -219,14 +219,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S3z-AQ-jKC">
-                                            <rect key="frame" x="227" y="40" width="74" height="30"/>
+                                            <rect key="frame" x="238" y="30" width="74" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="最愛"/>
+                                            <connections>
+                                                <action selector="onClickFunctionButton:" destination="4c6-uZ-2fR" eventType="touchUpInside" id="icF-pB-kJS"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="adderessLabel" destination="2et-x3-3HQ" id="vaU-Jm-q1v"/>
+                                    <outlet property="functionButton" destination="S3z-AQ-jKC" id="644-nz-yw9"/>
                                     <outlet property="phoneNumberLabel" destination="NLd-6M-5Yk" id="1TX-d8-sgc"/>
                                     <outlet property="storeNameLabel" destination="vOg-2u-A0Q" id="t7c-5A-3cc"/>
                                     <outlet property="webAddressLabel" destination="ISS-En-6aU" id="tFQ-Em-wHI"/>

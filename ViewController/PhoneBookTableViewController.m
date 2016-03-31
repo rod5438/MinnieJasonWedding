@@ -12,7 +12,7 @@
 #import "AddStoreDialogView.h"
 
 #define kHeaderCellHeight 30
-@interface PhoneBookTableViewController ()
+@interface PhoneBookTableViewController () <PhoneBookTableViewCellDelegate>
 
 @property NSArray <StoreData *> *userData;
 @property NSArray <StoreData *> *buildInData;
@@ -75,15 +75,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PhoneBookTableViewCell *cell = (PhoneBookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
+    cell.delegate = self;
     if (indexPath.section == 0) {
         [cell setStore:self.favoritesData[indexPath.item]];
+        [cell setState:removeFavorites];
     }
     else if (indexPath.section == 1) {
         [cell setStore:self.userData[indexPath.item]];
+        [cell setState:addFavorites];
     }
     else if (indexPath.section == 2) {
         [cell setStore:self.buildInData[indexPath.item]];
+        [cell setState:addFavorites];
     }
     
     return cell;
@@ -146,6 +149,71 @@
 - (void)addNewStoreDataToViewWithIndexPath:(NSIndexPath *)indexPath // view method
 {
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+#pragma - mark PhoneBookTableViewCellDelegate
+
+- (void)onClickAddFavorites:(PhoneBookTableViewCell *)sender
+{
+    [self addFavoritesToDBWith:sender.storeData];
+    [self addFavoritesToModelWith:sender.storeData];
+    [self addFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:self.favoritesData.count - 1 inSection:0]];
+}
+
+- (void)onClickRemoveFavorites:(PhoneBookTableViewCell *)sender
+{
+    [self removeFavoritesToDBWith:sender.storeData];
+    NSInteger removeIndex = [self removeFavoritesToModelWith:sender.storeData];
+    [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:removeIndex inSection:0]];
+}
+
+- (void)addFavoritesToDBWith:(StoreData *)storeData
+{
+    storeData.isFavorites = YES;
+    [[DataBaseManager sharedInstance] updateUserStoreDataWithStoreData:storeData];
+}
+
+- (void)addFavoritesToModelWith:(StoreData *)storeData
+{
+    if (![self.favoritesData containsObject:storeData]) {
+        self.favoritesData = [self.favoritesData arrayByAddingObject:storeData];
+    }
+}
+
+- (void)addFavoritesToViewWithIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    if (cell) {
+        return;
+    }
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+- (void)removeFavoritesToDBWith:(StoreData *)storeData
+{
+    storeData.isFavorites = NO;
+    [[DataBaseManager sharedInstance] updateUserStoreDataWithStoreData:storeData];
+}
+
+- (NSInteger)removeFavoritesToModelWith:(StoreData *)storeData
+{
+    if (![self.favoritesData containsObject:storeData]) {
+        return NSNotFound;
+    }
+    NSMutableArray *favoritesMutableAData = [[NSMutableArray alloc] initWithArray:self.favoritesData];
+    NSInteger returnIndex = [favoritesMutableAData indexOfObject:storeData];
+    [favoritesMutableAData removeObject:storeData];
+    self.favoritesData = [NSArray arrayWithArray:favoritesMutableAData];
+    return returnIndex;
+}
+
+- (void)removeFavoritesToViewWithIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    if (!cell) {
+        return;
+    }
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
 /*
