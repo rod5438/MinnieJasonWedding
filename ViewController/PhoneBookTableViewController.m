@@ -10,6 +10,7 @@
 #import "PhoneBookTableViewCell.h"
 #import "DataBaseManager.h"
 #import "AddStoreDialogView.h"
+#import "UIView+Toast.h"
 
 #define kHeaderCellHeight 30
 @interface PhoneBookTableViewController () <PhoneBookTableViewCellDelegate>
@@ -130,9 +131,21 @@
 
 - (void)addStoreDialogDoneWithStoreData:(NSDictionary <NSString*, NSString*> *)storeDataDictionary;
 {
-    StoreData *storeData = [self addNewStoreDataToDBWithStoreData:storeDataDictionary];
-    [self addNewStoreDataModelWithStoreData:storeData];
-    [self addNewStoreDataToViewWithIndexPath:[NSIndexPath indexPathForRow:self.userData.count - 1 inSection:1]];
+    if ([self canAddStoreWithStoreDataDictionary:storeDataDictionary]) {
+        StoreData *storeData = [self addNewStoreDataToDBWithStoreData:storeDataDictionary];
+        [self addNewStoreDataModelWithStoreData:storeData];
+        [self addNewStoreDataToViewWithIndexPath:[NSIndexPath indexPathForRow:self.userData.count - 1 inSection:1]];
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.userData.count - 1 inSection:1] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+    }
+}
+
+- (BOOL)canAddStoreWithStoreDataDictionary:(NSDictionary <NSString*, NSString*> *)storeDataDictionary;
+{
+    if (storeDataDictionary[kStoreName] == nil || ((NSString *)storeDataDictionary[kStoreName]).length <= 0) {
+        [self.view makeToast:@"您至少要輸入店家名稱" duration:1.0f position:CSToastPositionCenter];
+        return NO;
+    }
+    return YES;
 }
 
 - (StoreData *)addNewStoreDataToDBWithStoreData:(NSDictionary *)storeData // data method
