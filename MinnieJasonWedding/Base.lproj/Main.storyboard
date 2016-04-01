@@ -362,7 +362,7 @@
         <!--廠商目錄-->
         <scene sceneID="crf-ci-Yyg">
             <objects>
-                <viewController id="5kr-k8-3oo" sceneMemberID="viewController">
+                <viewController id="5kr-k8-3oo" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rMm-d0-68E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,23 +375,32 @@
                                         <rect key="frame" x="34" y="299" width="120" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="喜宴餐廳"/>
+                                        <connections>
+                                            <segue destination="TZA-oo-a3K" kind="push" identifier="StoreTypeRestaurant" id="S77-TQ-AWw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mEz-Qi-NyT">
                                         <rect key="frame" x="162" y="299" width="120" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="喜帖印刷"/>
+                                        <connections>
+                                            <segue destination="TZA-oo-a3K" kind="push" identifier="StoreTypePrint" id="BLz-Ie-B9t"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gno-Nt-wOw">
                                         <rect key="frame" x="162" y="55" width="120" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="婚禮活動企劃"/>
+                                        <state key="normal" title="攝影公司"/>
+                                        <connections>
+                                            <segue destination="TZA-oo-a3K" kind="push" identifier="StoreTypePhoto" id="125-PN-xji"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7F4-L7-cUH">
                                         <rect key="frame" x="34" y="55" width="120" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="婚紗公司"/>
                                         <connections>
-                                            <segue destination="TZA-oo-a3K" kind="push" id="IC3-Gn-1Gg"/>
+                                            <segue destination="TZA-oo-a3K" kind="push" identifier="StoreTypeDress" id="IC3-Gn-1Gg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p2m-kM-1T6">
@@ -419,4 +428,7 @@
         <image name="一家餐廳.jpg" width="480" height="360"/>
         <image name="儷宴會館.jpg" width="600" height="399"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IC3-Gn-1Gg"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -30,11 +30,6 @@
 
 @implementation PhoneBookTableViewController
 
-- (void)awakeFromNib
-{
-    self.type = StoreTypeDress;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.buildInData = [[DataBaseManager sharedInstance] loadBuildInDataWithType:self.type];

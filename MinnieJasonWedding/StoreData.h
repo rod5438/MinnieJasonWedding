@@ -16,14 +16,11 @@
 #define kIsFavorites    @"isFavorites"
 #define kStoreID        @"storeID"
 
-
-
-
 typedef enum : NSUInteger {
     StoreTypeDress, // 婚紗公司
     StoreTypePhoto, // 攝影公司
     StoreTypePrint, // 印刷公司
-    StoreTypeActivity, // 婚禮企劃
+    StoreTypeRestaurant, // 喜宴餐廳
 } StoreType;
 
 @interface StoreData : NSObject
