@@ -13,6 +13,10 @@
 #import "UIView+Toast.h"
 
 #define kHeaderCellHeight 30
+#define kFavoritesSection 0
+#define kUserDataSection 1
+#define kBuildInSection 2
+
 @interface PhoneBookTableViewController () <PhoneBookTableViewCellDelegate>
 
 @property NSArray <StoreData *> *userData;
@@ -60,13 +64,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) { // 最愛
+    if (section == kFavoritesSection) { // 最愛
         return self.favoritesData.count;
     }
-    else if (section == 1) {  // 使用者新增
+    else if (section == kUserDataSection) {  // 使用者新增
         return self.userData.count;
     }
-    else if (section == 2) { // 內建
+    else if (section == kBuildInSection) { // 內建
         return self.buildInData.count;
     }
     return 0;
@@ -77,15 +81,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PhoneBookTableViewCell *cell = (PhoneBookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.delegate = self;
-    if (indexPath.section == 0) {
+    if (indexPath.section == kFavoritesSection) {
         [cell setStore:self.favoritesData[indexPath.item]];
         [cell setState:removeFavorites];
     }
-    else if (indexPath.section == 1) {
+    else if (indexPath.section == kUserDataSection) {
         [cell setStore:self.userData[indexPath.item]];
         [cell setState:addFavorites];
     }
-    else if (indexPath.section == 2) {
+    else if (indexPath.section == kBuildInSection) {
         [cell setStore:self.buildInData[indexPath.item]];
         [cell setState:addFavorites];
     }
@@ -104,13 +108,13 @@
     textLabel.textAlignment = NSTextAlignmentCenter;
     [textLabel setTextColor:[UIColor colorWithRed:221.0/255.0 green:60.0/255.0 blue:113.0/255.0 alpha:1.0]];
     [textLabel setContentMode:UIViewContentModeBottom];
-    if (section == 0) {
+    if (section == kFavoritesSection) {
         [textLabel setText:@"我的最愛"];
     }
-    else if (section == 1) {
+    else if (section == kUserDataSection) {
         [textLabel setText:@"使用者新增"];
     }
-    else if (section == 2) {
+    else if (section == kBuildInSection) {
         [textLabel setText:@"目錄"];
     }
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, kHeaderCellHeight)];
@@ -170,14 +174,14 @@
 {
     [self addFavoritesToDBWith:sender.storeData];
     [self addFavoritesToModelWith:sender.storeData];
-    [self addFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:self.favoritesData.count - 1 inSection:0]];
+    [self addFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:self.favoritesData.count - 1 inSection:kFavoritesSection]];
 }
 
 - (void)onClickRemoveFavorites:(PhoneBookTableViewCell *)sender
 {
     [self removeFavoritesToDBWith:sender.storeData];
     NSInteger removeIndex = [self removeFavoritesToModelWith:sender.storeData];
-    [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:removeIndex inSection:0]];
+    [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:removeIndex inSection:kFavoritesSection]];
 }
 
 - (void)addFavoritesToDBWith:(StoreData *)storeData
@@ -237,17 +241,54 @@
 }
 */
 
-/*
-// Override to support editing the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == kBuildInSection) {
+        return NO;
+    }
+    return YES;
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        if (indexPath.section == kFavoritesSection) {
+            StoreData *storedata = self.favoritesData[indexPath.row];
+            [self removeFavoritesToDBWith:storedata];
+            NSInteger index = [self removeFavoritesToModelWith:storedata];
+            [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:index inSection:kFavoritesSection]];
+        }
+        else if (indexPath.section == kUserDataSection) {
+            StoreData *storedata = self.userData[indexPath.row];
+            [self deleteStoreDataToDBWithStoreData:indexPath];
+            BOOL isFavorites =[self deleteStoreDataToModelWithStoreData:indexPath];
+            [self deleteStoreDataToViewWithIndexPath:indexPath];
+            if (isFavorites) {
+                NSInteger index = [self removeFavoritesToModelWith:storedata];
+                [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:index inSection:kFavoritesSection]];
+            }
+        }
+    }
 }
-*/
+
+- (void)deleteStoreDataToDBWithStoreData:(NSIndexPath *)indexPath // data method
+{
+    StoreData *storeData = self.userData[indexPath.row];
+    [[DataBaseManager sharedInstance] deleteUserStoreDataWithStoreData:storeData];
+}
+
+- (BOOL)deleteStoreDataToModelWithStoreData:(NSIndexPath *)indexPath // model method
+{
+    NSMutableArray *userDataMutableArray = [NSMutableArray arrayWithArray:self.userData];
+    StoreData *deleteStore = self.userData[indexPath.row];
+    [userDataMutableArray removeObject:deleteStore];
+    self.userData = [NSArray arrayWithArray:userDataMutableArray];
+    return deleteStore.isFavorites;
+}
+
+- (void)deleteStoreDataToViewWithIndexPath:(NSIndexPath *)indexPath // view method
+{
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
 
 /*
 // Override to support rearranging the table view.

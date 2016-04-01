@@ -63,6 +63,9 @@
     NSMutableArray *buildInDatas = [[NSMutableArray alloc] init];
     for (NSInteger index = 0 ; index < [self numberOfBuildInData] ; index++) {
         NSDictionary *dictionary = [[NSUserDefaults standardUserDefaults] objectForKey:[self getKeyForBuildInStoreDataIndex:index]];
+        if (dictionary == nil) {
+            continue;
+        }
         StoreData *data = [[StoreData alloc] initWithDictionary:dictionary];
         if (data) {
             [buildInDatas addObject:data];
@@ -89,6 +92,9 @@
     NSMutableArray *userDatas = [[NSMutableArray alloc] init];
     for (NSInteger index = 0 ; index < [self numberOfUserData] ; index++) {
         NSDictionary *dictionary = [[NSUserDefaults standardUserDefaults] objectForKey:[self getKeyForUserStoreDataIndex:index]];
+        if (dictionary == nil) {
+            continue;
+        }
         StoreData *data = [[StoreData alloc] initWithDictionary:dictionary];
         if (data) {
             [userDatas addObject:data];
@@ -146,6 +152,11 @@
     storeDataDictionary[kIsFavorites] = @(storeData.isFavorites);
     storeDataDictionary[kStoreID] = storeData.storeID;
     [[NSUserDefaults standardUserDefaults] setObject:storeDataDictionary forKey:storeData.storeID];
+}
+
+- (void)deleteUserStoreDataWithStoreData:(StoreData *)storeData
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:storeData.storeID];
 }
 
 - (NSString *)getKeyForUserStoreDataIndex:(NSInteger)index
