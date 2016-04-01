@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StoreData.h"
 
 typedef enum : NSUInteger {
     addFavorites,
@@ -23,9 +22,8 @@ typedef enum : NSUInteger {
 
 @interface PhoneBookTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) id <PhoneBookTableViewCellDelegate> delegate;
-@property (nonatomic, readonly) StoreData *storeData;
-- (void)setStore:(StoreData *)storeData;
+@property (weak, nonatomic) IBOutlet id <PhoneBookTableViewCellDelegate> delegate;
+- (void)setStoreDataDictionary:(NSDictionary <NSString *, NSString *> *)storeDataDictionary;
 - (void)setState:(FunctionButtonState)state;
 
 @end

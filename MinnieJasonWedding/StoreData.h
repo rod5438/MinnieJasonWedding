@@ -35,6 +35,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, readonly) StoreType type;
 @property (nonatomic) BOOL isFavorites;
 @property (nonatomic, retain) NSString *storeID;
+@property (nonatomic ,retain) NSDictionary *storeDataDictionary;
 
 - (instancetype)initWithDictionary:(NSDictionary <NSString *, NSString *> *)dictionary;
 

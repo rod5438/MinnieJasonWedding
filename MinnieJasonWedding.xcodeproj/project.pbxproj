@@ -95,6 +95,7 @@
 		96CB24D61CA05AE900949526 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D31CA05AE900949526 /* Default.png */; };
 		96CB24D71CA05AE900949526 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24D41CA05AE900949526 /* Default@2x.png */; };
 		96CB24E01CA05F9100949526 /* LaunchScreen~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB24DE1CA05F9100949526 /* LaunchScreen~ipad.storyboard */; };
+		96D44DD21CAEB0B700D7DEED /* PhoneBookTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D44DD11CAEB0B700D7DEED /* PhoneBookTableView.m */; };
 		96E302DA1CA7B98F002FAF82 /* PhoneBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302D91CA7B98F002FAF82 /* PhoneBookTableViewController.m */; };
 		96E302DF1CA7BB57002FAF82 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302DE1CA7BB57002FAF82 /* DataBaseManager.m */; };
 		96E302E31CA7BF32002FAF82 /* StoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E302E21CA7BF32002FAF82 /* StoreData.m */; };
@@ -221,6 +222,8 @@
 		96CB24D31CA05AE900949526 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		96CB24D41CA05AE900949526 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		96CB24DF1CA05F9100949526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/LaunchScreen~ipad.storyboard"; sourceTree = "<group>"; };
+		96D44DD01CAEB0B700D7DEED /* PhoneBookTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookTableView.h; sourceTree = "<group>"; };
+		96D44DD11CAEB0B700D7DEED /* PhoneBookTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookTableView.m; sourceTree = "<group>"; };
 		96E302D81CA7B98F002FAF82 /* PhoneBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneBookTableViewController.h; path = ViewController/PhoneBookTableViewController.h; sourceTree = SOURCE_ROOT; };
 		96E302D91CA7B98F002FAF82 /* PhoneBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneBookTableViewController.m; path = ViewController/PhoneBookTableViewController.m; sourceTree = SOURCE_ROOT; };
 		96E302DD1CA7BB57002FAF82 /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseManager.h; sourceTree = "<group>"; };
@@ -457,6 +460,8 @@
 			children = (
 				96E7513E1CAA51DC00A62F1A /* AddStoreDialogView.h */,
 				96E7513F1CAA51DC00A62F1A /* AddStoreDialogView.m */,
+				96D44DD01CAEB0B700D7DEED /* PhoneBookTableView.h */,
+				96D44DD11CAEB0B700D7DEED /* PhoneBookTableView.m */,
 			);
 			name = ViewComponent;
 			sourceTree = "<group>";
@@ -758,6 +763,7 @@
 				96E302DA1CA7B98F002FAF82 /* PhoneBookTableViewController.m in Sources */,
 				9685978A1C9C0634003E9D96 /* AppDelegate.m in Sources */,
 				968597871C9C0634003E9D96 /* main.m in Sources */,
+				96D44DD21CAEB0B700D7DEED /* PhoneBookTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,14 +44,15 @@
     return;
 }
 
-- (void)setStore:(StoreData *)storeData
+- (void)setStoreDataDictionary:(NSDictionary<NSString *,NSString *> *)storeDataDictionary
 {
-    _storeData = storeData;
-    _storeNameLabel.text = storeData.storeName;
-    _phoneNumberLabel.text = storeData.phoneNumber;
-    _adderessLabel.text = storeData.address;
-    _webAddressLabel.text = storeData.webAddress;
+    _storeNameLabel.text = storeDataDictionary[@"storeName"];
+    _phoneNumberLabel.text = storeDataDictionary[@"phoneNumber"];
+    _adderessLabel.text = storeDataDictionary[@"address"];
+    _webAddressLabel.text = storeDataDictionary[@"webAddress"];
 }
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

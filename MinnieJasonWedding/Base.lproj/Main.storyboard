@@ -178,7 +178,7 @@
         <scene sceneID="oED-be-0yj">
             <objects>
                 <tableViewController id="TZA-oo-a3K" customClass="PhoneBookTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="I1Y-A5-S7N">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="I1Y-A5-S7N" customClass="PhoneBookTableView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,6 +230,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="adderessLabel" destination="2et-x3-3HQ" id="vaU-Jm-q1v"/>
+                                    <outlet property="delegate" destination="I1Y-A5-S7N" id="j8P-4M-Eei"/>
                                     <outlet property="functionButton" destination="S3z-AQ-jKC" id="644-nz-yw9"/>
                                     <outlet property="phoneNumberLabel" destination="NLd-6M-5Yk" id="1TX-d8-sgc"/>
                                     <outlet property="storeNameLabel" destination="vOg-2u-A0Q" id="t7c-5A-3cc"/>

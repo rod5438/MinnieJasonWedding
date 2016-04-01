@@ -12,6 +12,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary <NSString *, NSString *> *)dictionary
 {
+    _storeDataDictionary = dictionary;
     self = [super init];
     if (self) {
         _storeName = dictionary[kStoreName];

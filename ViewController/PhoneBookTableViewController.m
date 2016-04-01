@@ -7,6 +7,7 @@
 //
 
 #import "PhoneBookTableViewController.h"
+#import "PhoneBookTableView.h"
 #import "PhoneBookTableViewCell.h"
 #import "DataBaseManager.h"
 #import "AddStoreDialogView.h"
@@ -17,7 +18,7 @@
 #define kUserDataSection 1
 #define kBuildInSection 2
 
-@interface PhoneBookTableViewController () <PhoneBookTableViewCellDelegate>
+@interface PhoneBookTableViewController () <PhoneBookTableViewDelegate>
 
 @property NSArray <StoreData *> *userData;
 @property NSArray <StoreData *> *buildInData;
@@ -76,21 +77,20 @@
     return 0;
 }
 
-
+#pragma mark - UITableViewDelegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PhoneBookTableViewCell *cell = (PhoneBookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.delegate = self;
     if (indexPath.section == kFavoritesSection) {
-        [cell setStore:self.favoritesData[indexPath.item]];
+        [cell setStoreDataDictionary:self.favoritesData[indexPath.item].storeDataDictionary];
         [cell setState:removeFavorites];
     }
     else if (indexPath.section == kUserDataSection) {
-        [cell setStore:self.userData[indexPath.item]];
+        [cell setStoreDataDictionary:self.userData[indexPath.item].storeDataDictionary];
         [cell setState:addFavorites];
     }
     else if (indexPath.section == kBuildInSection) {
-        [cell setStore:self.buildInData[indexPath.item]];
+        [cell setStoreDataDictionary:self.buildInData[indexPath.item].storeDataDictionary];
         [cell setState:addFavorites];
     }
     
@@ -121,6 +121,57 @@
     [header setBackgroundColor:[UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1.0]];
     [header addSubview:textLabel];
     return header;
+}
+
+#pragma mark - PhoneBookTableViewDelegate
+
+- (void)tableView:( UITableView * _Nonnull )tableView addFavoritesForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath
+{
+    StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
+    [self addFavoritesToDBWith:storeData];
+    [self addFavoritesToModelWith:storeData];
+    [self addFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:self.favoritesData.count - 1 inSection:kFavoritesSection]];
+}
+
+- (void)tableView:( UITableView * _Nonnull )tableView removeFavoritesForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath
+{
+    StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
+    [self removeFavoritesToDBWithStoreData:storeData];
+    [self removeFavoritesToModelWithStoreData:storeData];
+    [self removeFavoritesToViewWithIndexPath:indexPath];
+}
+
+- (StoreData * _Nullable)getStoreDataForIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == kFavoritesSection) {
+        return self.favoritesData[indexPath.row];
+    }
+    if (indexPath.section == kUserDataSection) {
+        return self.userData[indexPath.row];
+    }
+    if (indexPath.section == kBuildInSection) {
+        return self.buildInData[indexPath.row];
+    }
+    return nil;
+}
+
+- (NSArray <NSIndexPath *> * _Nonnull)getIndexPathsForStoreData:(StoreData *)storeData
+{
+    NSMutableArray <NSIndexPath *> *indexPathsArray = [[NSMutableArray alloc] init];
+    NSInteger index;
+    index = [self.favoritesData indexOfObject:storeData];
+    if (index != NSNotFound) {
+        [indexPathsArray addObject:[NSIndexPath indexPathForItem:index inSection:kFavoritesSection]];
+    }
+    index = [self.userData indexOfObject:storeData];
+    if (index != NSNotFound) {
+        [indexPathsArray addObject:[NSIndexPath indexPathForItem:index inSection:kUserDataSection]];
+    }
+    index = [self.buildInData indexOfObject:storeData];
+    if (index != NSNotFound) {
+        [indexPathsArray addObject:[NSIndexPath indexPathForItem:index inSection:kBuildInSection]];
+    }
+    return [NSArray arrayWithArray:indexPathsArray];
 }
 
 - (IBAction)addUserStore:(id)sender
@@ -168,22 +219,6 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
-#pragma - mark PhoneBookTableViewCellDelegate
-
-- (void)onClickAddFavorites:(PhoneBookTableViewCell *)sender
-{
-    [self addFavoritesToDBWith:sender.storeData];
-    [self addFavoritesToModelWith:sender.storeData];
-    [self addFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:self.favoritesData.count - 1 inSection:kFavoritesSection]];
-}
-
-- (void)onClickRemoveFavorites:(PhoneBookTableViewCell *)sender
-{
-    [self removeFavoritesToDBWith:sender.storeData];
-    NSInteger removeIndex = [self removeFavoritesToModelWith:sender.storeData];
-    [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:removeIndex inSection:kFavoritesSection]];
-}
-
 - (void)addFavoritesToDBWith:(StoreData *)storeData
 {
     storeData.isFavorites = YES;
@@ -206,22 +241,21 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
-- (void)removeFavoritesToDBWith:(StoreData *)storeData
+- (void)removeFavoritesToDBWithStoreData:(StoreData *)storeData
 {
     storeData.isFavorites = NO;
     [[DataBaseManager sharedInstance] updateUserStoreDataWithStoreData:storeData];
 }
 
-- (NSInteger)removeFavoritesToModelWith:(StoreData *)storeData
+- (void)removeFavoritesToModelWithStoreData:(StoreData *)storeData
 {
     if (![self.favoritesData containsObject:storeData]) {
-        return NSNotFound;
+        return;
     }
     NSMutableArray *favoritesMutableAData = [[NSMutableArray alloc] initWithArray:self.favoritesData];
-    NSInteger returnIndex = [favoritesMutableAData indexOfObject:storeData];
     [favoritesMutableAData removeObject:storeData];
     self.favoritesData = [NSArray arrayWithArray:favoritesMutableAData];
-    return returnIndex;
+    return;
 }
 
 - (void)removeFavoritesToViewWithIndexPath:(NSIndexPath *)indexPath
@@ -232,14 +266,6 @@
     }
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -252,37 +278,36 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         if (indexPath.section == kFavoritesSection) {
-            StoreData *storedata = self.favoritesData[indexPath.row];
-            [self removeFavoritesToDBWith:storedata];
-            NSInteger index = [self removeFavoritesToModelWith:storedata];
-            [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:index inSection:kFavoritesSection]];
+            StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
+            [self removeFavoritesToDBWithStoreData:storeData];
+            [self removeFavoritesToModelWithStoreData:storeData];
+            [self removeFavoritesToViewWithIndexPath:indexPath];
         }
         else if (indexPath.section == kUserDataSection) {
-            StoreData *storedata = self.userData[indexPath.row];
-            [self deleteStoreDataToDBWithStoreData:indexPath];
-            BOOL isFavorites =[self deleteStoreDataToModelWithStoreData:indexPath];
-            [self deleteStoreDataToViewWithIndexPath:indexPath];
-            if (isFavorites) {
-                NSInteger index = [self removeFavoritesToModelWith:storedata];
-                [self removeFavoritesToViewWithIndexPath:[NSIndexPath indexPathForItem:index inSection:kFavoritesSection]];
-            }
+            StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
+            NSArray <NSIndexPath *> *indexPathsArray = [self getIndexPathsForStoreData:storeData];
+            [self deleteStoreDataToDBWithStoreData:storeData];
+            [self deleteStoreDataToModelWithStoreData:storeData];
+            [self deleteStoreDataToViewWithIndexPathsArray:indexPathsArray];
         }
     }
 }
 
-- (void)deleteStoreDataToDBWithStoreData:(NSIndexPath *)indexPath // data method
+- (void)deleteStoreDataToDBWithStoreData:(StoreData *)storeData // data method
 {
-    StoreData *storeData = self.userData[indexPath.row];
     [[DataBaseManager sharedInstance] deleteUserStoreDataWithStoreData:storeData];
 }
 
-- (BOOL)deleteStoreDataToModelWithStoreData:(NSIndexPath *)indexPath // model method
+- (void)deleteStoreDataToModelWithStoreData:(StoreData *)storeData // model method
 {
-    NSMutableArray *userDataMutableArray = [NSMutableArray arrayWithArray:self.userData];
-    StoreData *deleteStore = self.userData[indexPath.row];
-    [userDataMutableArray removeObject:deleteStore];
+    NSMutableArray *userDataMutableArray;
+    userDataMutableArray = [NSMutableArray arrayWithArray:self.userData];
+    [userDataMutableArray removeObject:storeData];
     self.userData = [NSArray arrayWithArray:userDataMutableArray];
-    return deleteStore.isFavorites;
+    userDataMutableArray = [NSMutableArray arrayWithArray:self.favoritesData];
+    [userDataMutableArray removeObject:storeData];
+    self.favoritesData = [NSArray arrayWithArray:userDataMutableArray];
+    return;
 }
 
 - (void)deleteStoreDataToViewWithIndexPath:(NSIndexPath *)indexPath // view method
@@ -290,28 +315,12 @@
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)deleteStoreDataToViewWithIndexPathsArray:(NSArray <NSIndexPath *> *)indexPathsArray
+{
+    if (indexPathsArray == nil || indexPathsArray.count <= 1) {
+        return;
+    }
+    [self.tableView deleteRowsAtIndexPaths:indexPathsArray withRowAnimation:UITableViewRowAnimationTop];
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
