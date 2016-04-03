@@ -26,4 +26,11 @@
     return self;
 }
 
+- (void)setIsFavorites:(BOOL)isFavorites
+{
+    _isFavorites = isFavorites;
+    NSNumber *isFavoritesNumber = _storeDataDictionary[kIsFavorites];
+    isFavoritesNumber = @(_isFavorites);
+}
+
 @end

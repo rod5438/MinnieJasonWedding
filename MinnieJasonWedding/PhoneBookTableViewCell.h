@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
 @interface PhoneBookTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet id <PhoneBookTableViewCellDelegate> delegate;
+@property (nonatomic) BOOL isFavorites;
 - (void)setStoreDataDictionary:(NSDictionary <NSString *, NSString *> *)storeDataDictionary;
-- (void)setState:(FunctionButtonState)state;
 
 @end

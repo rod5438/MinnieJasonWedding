@@ -218,10 +218,10 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S3z-AQ-jKC">
-                                            <rect key="frame" x="238" y="30" width="74" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="最愛"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S3z-AQ-jKC">
+                                            <rect key="frame" x="272" y="25" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="heart.png"/>
                                             <connections>
                                                 <action selector="onClickFunctionButton:" destination="4c6-uZ-2fR" eventType="touchUpInside" id="icF-pB-kJS"/>
                                             </connections>
@@ -446,6 +446,7 @@
         <image name="bookRed.png" width="320" height="320"/>
         <image name="bookWhite.png" width="320" height="320"/>
         <image name="bookYellow.png" width="320" height="320"/>
+        <image name="heart.png" width="96" height="96"/>
         <image name="一家餐廳.jpg" width="480" height="360"/>
         <image name="儷宴會館.jpg" width="600" height="399"/>
     </resources>

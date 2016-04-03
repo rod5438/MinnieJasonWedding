@@ -15,7 +15,6 @@
 @property IBOutlet UILabel *adderessLabel;
 @property IBOutlet UILabel *webAddressLabel;
 @property IBOutlet UIButton *functionButton;
-@property (nonatomic)  FunctionButtonState state;
 
 @end
 
@@ -25,23 +24,13 @@
     // Initialization code
 }
 
-- (void)setState:(FunctionButtonState)state
+- (void)setIsFavorites:(BOOL)isFavorites
 {
-    _state = state;
-    switch (state) {
-        case addFavorites:
-            [self.functionButton setTitle:@"加入最愛" forState:UIControlStateNormal];
-            [self.functionButton setTitle:@"加入最愛" forState:UIControlStateSelected];
-            [self.functionButton setTitle:@"加入最愛" forState:UIControlStateHighlighted];
-            break;
-        case removeFavorites:
-        default:
-            [self.functionButton setTitle:@"移除最愛" forState:UIControlStateNormal];
-            [self.functionButton setTitle:@"移除最愛" forState:UIControlStateSelected];
-            [self.functionButton setTitle:@"移除最愛" forState:UIControlStateHighlighted];
-            break;
-    }
-    return;
+    _isFavorites = isFavorites;
+    UIImage *image = isFavorites ? [UIImage imageNamed:@"heartPress.png"] : [UIImage imageNamed:@"heart.png"];
+    [self.functionButton setImage:image forState:UIControlStateNormal];
+    [self.functionButton setImage:image forState:UIControlStateSelected];
+    [self.functionButton setImage:image forState:UIControlStateHighlighted];
 }
 
 - (void)setStoreDataDictionary:(NSDictionary<NSString *,NSString *> *)storeDataDictionary
@@ -50,6 +39,7 @@
     _phoneNumberLabel.text = storeDataDictionary[@"phoneNumber"];
     _adderessLabel.text = storeDataDictionary[@"address"];
     _webAddressLabel.text = storeDataDictionary[@"webAddress"];
+    self.isFavorites = [storeDataDictionary[@"isFavorites"] boolValue];
 }
 
 
@@ -62,18 +52,15 @@
 
 - (IBAction)onClickFunctionButton:(id)sender
 {
-    switch (self.state) {
-        case addFavorites:
-            if ([self.delegate respondsToSelector:@selector(onClickAddFavorites:)]) {
-                [self.delegate onClickAddFavorites:self];
-            }
-            break;
-        case removeFavorites:
-        default:
-            if ([self.delegate respondsToSelector:@selector(onClickRemoveFavorites:)]) {
-                [self.delegate onClickRemoveFavorites:self];
-            }
-            break;
+    if (self.isFavorites) {
+        if ([self.delegate respondsToSelector:@selector(onClickRemoveFavorites:)]) {
+            [self.delegate onClickRemoveFavorites:self];
+        }
+    }
+    else {
+        if ([self.delegate respondsToSelector:@selector(onClickAddFavorites:)]) {
+            [self.delegate onClickAddFavorites:self];
+        }
     }
 }
 

@@ -78,15 +78,12 @@
     PhoneBookTableViewCell *cell = (PhoneBookTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     if (indexPath.section == kFavoritesSection) {
         [cell setStoreDataDictionary:self.favoritesData[indexPath.item].storeDataDictionary];
-        [cell setState:removeFavorites];
     }
     else if (indexPath.section == kUserDataSection) {
         [cell setStoreDataDictionary:self.userData[indexPath.item].storeDataDictionary];
-        [cell setState:addFavorites];
     }
     else if (indexPath.section == kBuildInSection) {
         [cell setStoreDataDictionary:self.buildInData[indexPath.item].storeDataDictionary];
-        [cell setState:addFavorites];
     }
     
     return cell;
@@ -122,6 +119,8 @@
 
 - (void)tableView:( UITableView * _Nonnull )tableView addFavoritesForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath
 {
+    PhoneBookTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.isFavorites = YES;
     StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
     [self addFavoritesToDBWith:storeData];
     [self addFavoritesToModelWith:storeData];
@@ -130,10 +129,39 @@
 
 - (void)tableView:( UITableView * _Nonnull )tableView removeFavoritesForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath
 {
-    StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
-    [self removeFavoritesToDBWithStoreData:storeData];
-    [self removeFavoritesToModelWithStoreData:storeData];
-    [self removeFavoritesToViewWithIndexPath:indexPath];
+    switch (indexPath.section) {
+        case kFavoritesSection: {
+            PhoneBookTableViewCell *cell;
+            cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.isFavorites = NO;
+            StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
+            NSIndexPath *buildInOrUserIndexPath = [self getBuindInOrUserIndexPathForStoreData:storeData];
+            cell = [tableView cellForRowAtIndexPath:buildInOrUserIndexPath];
+            cell.isFavorites = NO;
+            [self removeFavoritesToDBWithStoreData:storeData];
+            [self removeFavoritesToModelWithStoreData:storeData];
+            [self removeFavoritesToViewWithIndexPath:indexPath];
+            break;
+        }
+        case kUserDataSection:
+        case kBuildInSection:
+        default: {
+            PhoneBookTableViewCell *cell;
+            cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.isFavorites = NO;
+            StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
+            NSIndexPath *favoritesIndexPath = [self getFavoritesIndexPathForStoreData:storeData];
+            cell = [tableView cellForRowAtIndexPath:favoritesIndexPath];
+            cell.isFavorites = NO;
+            [self removeFavoritesToDBWithStoreData:storeData];
+            [self removeFavoritesToModelWithStoreData:storeData];
+            [self removeFavoritesToViewWithIndexPath:favoritesIndexPath];
+            break;
+        }
+    }
+    
+    
+    
 }
 
 - (StoreData * _Nullable)getStoreDataForIndexPath:(NSIndexPath *)indexPath
@@ -167,6 +195,30 @@
         [indexPathsArray addObject:[NSIndexPath indexPathForItem:index inSection:kBuildInSection]];
     }
     return [NSArray arrayWithArray:indexPathsArray];
+}
+
+- (NSIndexPath *)getFavoritesIndexPathForStoreData:(StoreData *)storeData
+{
+    NSInteger index;
+    index = [self.favoritesData indexOfObject:storeData];
+    if (index != NSNotFound) {
+        return [NSIndexPath indexPathForItem:index inSection:kFavoritesSection];
+    }
+    return nil;
+}
+
+- (NSIndexPath *)getBuindInOrUserIndexPathForStoreData:(StoreData *)storeData
+{
+    NSInteger index;
+    index = [self.buildInData indexOfObject:storeData];
+    if (index != NSNotFound) {
+        return [NSIndexPath indexPathForItem:index inSection:kBuildInSection];
+    }
+    index = [self.userData indexOfObject:storeData];
+    if (index != NSNotFound) {
+        return [NSIndexPath indexPathForItem:index inSection:kUserDataSection];
+    }
+    return nil;
 }
 
 - (IBAction)addUserStore:(id)sender
@@ -274,6 +326,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         if (indexPath.section == kFavoritesSection) {
             StoreData *storeData = [self getStoreDataForIndexPath:indexPath];
+            NSIndexPath *buildInOrUserIndexPath = [self getBuindInOrUserIndexPathForStoreData:storeData];
+            PhoneBookTableViewCell *cell = [tableView cellForRowAtIndexPath:buildInOrUserIndexPath];
+            cell.isFavorites = NO;
             [self removeFavoritesToDBWithStoreData:storeData];
             [self removeFavoritesToModelWithStoreData:storeData];
             [self removeFavoritesToViewWithIndexPath:indexPath];

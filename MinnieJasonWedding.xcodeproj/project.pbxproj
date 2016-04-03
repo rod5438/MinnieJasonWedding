@@ -14,6 +14,8 @@
 		963FA4521CB0E40200409B87 /* bookWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44D1CB0E40200409B87 /* bookWhite.png */; };
 		963FA4531CB0E40200409B87 /* bookYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44E1CB0E40200409B87 /* bookYellow.png */; };
 		963FA4551CB0E44300409B87 /* bookBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA4541CB0E44300409B87 /* bookBlue.png */; };
+		963FA4591CB0EEDA00409B87 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA4571CB0EEDA00409B87 /* heart.png */; };
+		963FA45A1CB0EEDA00409B87 /* heartPress.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA4581CB0EEDA00409B87 /* heartPress.png */; };
 		964A61C21CA822A7004D9B7C /* PhoneBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */; };
 		967B0E621C9FDE440010C612 /* PhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967B0E611C9FDE440010C612 /* PhotoBrowserViewController.m */; };
 		968597871C9C0634003E9D96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597861C9C0634003E9D96 /* main.m */; };
@@ -138,6 +140,8 @@
 		963FA44D1CB0E40200409B87 /* bookWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookWhite.png; sourceTree = "<group>"; };
 		963FA44E1CB0E40200409B87 /* bookYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookYellow.png; sourceTree = "<group>"; };
 		963FA4541CB0E44300409B87 /* bookBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookBlue.png; sourceTree = "<group>"; };
+		963FA4571CB0EEDA00409B87 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		963FA4581CB0EEDA00409B87 /* heartPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartPress.png; sourceTree = "<group>"; };
 		964A61C01CA822A7004D9B7C /* PhoneBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookTableViewCell.h; sourceTree = "<group>"; };
 		964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookTableViewCell.m; sourceTree = "<group>"; };
 		967B0E601C9FDE440010C612 /* PhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoBrowserViewController.h; path = ViewController/PhotoBrowserViewController.h; sourceTree = SOURCE_ROOT; };
@@ -296,6 +300,15 @@
 				963FA44E1CB0E40200409B87 /* bookYellow.png */,
 			);
 			name = book;
+			sourceTree = "<group>";
+		};
+		963FA4561CB0EECD00409B87 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				963FA4571CB0EEDA00409B87 /* heart.png */,
+				963FA4581CB0EEDA00409B87 /* heartPress.png */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		964A61BF1CA8224E004D9B7C /* Cell */ = {
@@ -499,6 +512,7 @@
 		96EB9D5C1C9C18FB006E9222 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				963FA4561CB0EECD00409B87 /* cell */,
 				963FA4491CB0E3CF00409B87 /* book */,
 				96CB24CF1CA0589900949526 /* launchScreen.png */,
 				96CB24CD1CA0578C00949526 /* appIconBig@2x.png */,
@@ -695,6 +709,7 @@
 				96CB24A91C9FF9F800949526 /* DS_18575.jpg in Resources */,
 				96CB24AE1C9FF9F800949526 /* DS_18590.jpg in Resources */,
 				96CB24D71CA05AE900949526 /* Default@2x.png in Resources */,
+				963FA4591CB0EEDA00409B87 /* heart.png in Resources */,
 				96CB24D51CA05AE900949526 /* Default-568h@2x.png in Resources */,
 				96CB24A01C9FF9F800949526 /* DS_18527.jpg in Resources */,
 				96CB248A1C9FF9F800949526 /* DS_18380.jpg in Resources */,
@@ -712,6 +727,7 @@
 				96CB24B21C9FF9F800949526 /* DS_18621.jpg in Resources */,
 				96CB24A31C9FF9F800949526 /* DS_18540.jpg in Resources */,
 				96CB24861C9FF9F800949526 /* DS_18362.jpg in Resources */,
+				963FA45A1CB0EEDA00409B87 /* heartPress.png in Resources */,
 				96CB24971C9FF9F800949526 /* DS_18469.jpg in Resources */,
 				96CB24BF1C9FF9F800949526 /* DS_18764.jpg in Resources */,
 				96CB24B71C9FF9F800949526 /* DS_18684.jpg in Resources */,
