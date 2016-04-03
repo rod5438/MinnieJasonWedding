@@ -12,7 +12,6 @@
 
 - (instancetype)initWithDictionary:(NSDictionary <NSString *, NSString *> *)dictionary
 {
-    _storeDataDictionary = dictionary;
     self = [super init];
     if (self) {
         _storeName = dictionary[kStoreName];
@@ -26,11 +25,17 @@
     return self;
 }
 
-- (void)setIsFavorites:(BOOL)isFavorites
+- (NSDictionary <NSString *, NSString *> *)storeDataDictionary
 {
-    _isFavorites = isFavorites;
-    NSNumber *isFavoritesNumber = _storeDataDictionary[kIsFavorites];
-    isFavoritesNumber = @(_isFavorites);
+    NSMutableDictionary *storeDataMutableDictionary = [[NSMutableDictionary alloc] init];
+    storeDataMutableDictionary[kStoreName] = _storeName;
+    storeDataMutableDictionary[kPhoneNumber] = _phoneNumber;
+    storeDataMutableDictionary[kAddress] = _address;
+    storeDataMutableDictionary[kWebAddress] = _webAddress;
+    storeDataMutableDictionary[kType] = @(_type);
+    storeDataMutableDictionary[kIsFavorites] = @(_isFavorites);
+    storeDataMutableDictionary[kStoreID] = _storeID;
+    return [[NSDictionary alloc] initWithDictionary:storeDataMutableDictionary];
 }
 
 @end
