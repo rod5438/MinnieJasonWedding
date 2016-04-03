@@ -8,6 +8,7 @@
 
 #import "CameraViewController.h"
 #import "MyImagePickerViewController.h"
+#import "UIView+Toast.h"
 
 @interface CameraViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -49,6 +50,30 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     
+}
+
+- (IBAction)sharePhoro:(id)sender
+{
+    // Show activity view controller
+    NSMutableArray *items = [NSMutableArray arrayWithObject:self.imageView.image];
+    [items addObject:@"Minnie & jason's wedding"];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+    // Show
+    typeof(self) __weak weakSelf = self;
+    [activityViewController setCompletionHandler:^(NSString *activityType, BOOL completed) {
+        if (completed) {
+            [weakSelf.view makeToast:@"已分享" duration:1.0f position:CSToastPositionCenter];
+        }
+        else {
+            [weakSelf.view makeToast:@"取消" duration:1.0f position:CSToastPositionCenter];
+        }
+    }];
+    // iOS 8 - Set the Anchor Point for the popover
+    if ([[[UIDevice currentDevice] systemVersion] compare:@"8" options:NSNumericSearch] != NSOrderedAscending) {
+        //self.activityViewController.popoverPresentationController.barButtonItem = _actionButton;
+    }
+    [self presentViewController:activityViewController animated:YES completion:nil];
+    return;
 }
 
 /*

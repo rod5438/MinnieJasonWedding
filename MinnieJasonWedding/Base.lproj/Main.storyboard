@@ -191,7 +191,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hQy-bB-PXK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="QVN-9E-Glb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="QVN-9E-Glb">
+                            <connections>
+                                <action selector="sharePhoro:" destination="eJq-hQ-zwK" id="Rue-bI-YBP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="LqX-jM-5uz" id="7QC-F7-vf5"/>
