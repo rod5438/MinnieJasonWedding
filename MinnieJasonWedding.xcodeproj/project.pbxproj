@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2492989FB55827D890F5958C /* libPods-MinnieJasonWedding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */; };
+		963FA44F1CB0E40200409B87 /* bookGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44A1CB0E40200409B87 /* bookGreen.png */; };
+		963FA4501CB0E40200409B87 /* bookOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44B1CB0E40200409B87 /* bookOrange.png */; };
+		963FA4511CB0E40200409B87 /* bookRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44C1CB0E40200409B87 /* bookRed.png */; };
+		963FA4521CB0E40200409B87 /* bookWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44D1CB0E40200409B87 /* bookWhite.png */; };
+		963FA4531CB0E40200409B87 /* bookYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44E1CB0E40200409B87 /* bookYellow.png */; };
+		963FA4551CB0E44300409B87 /* bookBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA4541CB0E44300409B87 /* bookBlue.png */; };
 		964A61C21CA822A7004D9B7C /* PhoneBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */; };
 		967B0E621C9FDE440010C612 /* PhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967B0E611C9FDE440010C612 /* PhotoBrowserViewController.m */; };
 		968597871C9C0634003E9D96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597861C9C0634003E9D96 /* main.m */; };
@@ -126,6 +132,12 @@
 		336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MinnieJasonWedding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F425038A214AE0346ADF83 /* Pods-MinnieJasonWedding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.debug.xcconfig"; sourceTree = "<group>"; };
 		9030F55F0FD8385050D449F2 /* Pods-MinnieJasonWedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.release.xcconfig"; sourceTree = "<group>"; };
+		963FA44A1CB0E40200409B87 /* bookGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookGreen.png; sourceTree = "<group>"; };
+		963FA44B1CB0E40200409B87 /* bookOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookOrange.png; sourceTree = "<group>"; };
+		963FA44C1CB0E40200409B87 /* bookRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookRed.png; sourceTree = "<group>"; };
+		963FA44D1CB0E40200409B87 /* bookWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookWhite.png; sourceTree = "<group>"; };
+		963FA44E1CB0E40200409B87 /* bookYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookYellow.png; sourceTree = "<group>"; };
+		963FA4541CB0E44300409B87 /* bookBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookBlue.png; sourceTree = "<group>"; };
 		964A61C01CA822A7004D9B7C /* PhoneBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookTableViewCell.h; sourceTree = "<group>"; };
 		964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookTableViewCell.m; sourceTree = "<group>"; };
 		967B0E601C9FDE440010C612 /* PhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoBrowserViewController.h; path = ViewController/PhotoBrowserViewController.h; sourceTree = SOURCE_ROOT; };
@@ -271,6 +283,19 @@
 				336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		963FA4491CB0E3CF00409B87 /* book */ = {
+			isa = PBXGroup;
+			children = (
+				963FA4541CB0E44300409B87 /* bookBlue.png */,
+				963FA44A1CB0E40200409B87 /* bookGreen.png */,
+				963FA44B1CB0E40200409B87 /* bookOrange.png */,
+				963FA44C1CB0E40200409B87 /* bookRed.png */,
+				963FA44D1CB0E40200409B87 /* bookWhite.png */,
+				963FA44E1CB0E40200409B87 /* bookYellow.png */,
+			);
+			name = book;
 			sourceTree = "<group>";
 		};
 		964A61BF1CA8224E004D9B7C /* Cell */ = {
@@ -474,6 +499,7 @@
 		96EB9D5C1C9C18FB006E9222 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				963FA4491CB0E3CF00409B87 /* book */,
 				96CB24CF1CA0589900949526 /* launchScreen.png */,
 				96CB24CD1CA0578C00949526 /* appIconBig@2x.png */,
 				96CB24C91CA055F200949526 /* appIcon@2x~ipad.png */,
@@ -607,6 +633,7 @@
 			files = (
 				96CB24B11C9FF9F800949526 /* DS_18608.jpg in Resources */,
 				96CB24BC1C9FF9F800949526 /* DS_18736.jpg in Resources */,
+				963FA4551CB0E44300409B87 /* bookBlue.png in Resources */,
 				96EB9D5F1C9C18FB006E9222 /* 一家餐廳.jpg in Resources */,
 				96CB24911C9FF9F800949526 /* DS_18443.jpg in Resources */,
 				96CB24A61C9FF9F800949526 /* DS_18567.jpg in Resources */,
@@ -617,6 +644,7 @@
 				96CB24821C9FF9F800949526 /* DS_18336.jpg in Resources */,
 				96CB24BE1C9FF9F800949526 /* DS_18760.jpg in Resources */,
 				96CB24AB1C9FF9F800949526 /* DS_18578.jpg in Resources */,
+				963FA44F1CB0E40200409B87 /* bookGreen.png in Resources */,
 				96CB24981C9FF9F800949526 /* DS_18470.jpg in Resources */,
 				96CB24CE1CA0578C00949526 /* appIconBig@2x.png in Resources */,
 				96CB24921C9FF9F800949526 /* DS_18445.jpg in Resources */,
@@ -624,6 +652,7 @@
 				96CB243D1C9FF43100949526 /* PhotoBrowser in Resources */,
 				96CB248F1C9FF9F800949526 /* DS_18433.jpg in Resources */,
 				96CB24B31C9FF9F800949526 /* DS_18627.jpg in Resources */,
+				963FA4521CB0E40200409B87 /* bookWhite.png in Resources */,
 				96CB24D61CA05AE900949526 /* Default.png in Resources */,
 				96CB24C71CA0555200949526 /* appIcon@2x.png in Resources */,
 				96CB24A11C9FF9F800949526 /* DS_18530.jpg in Resources */,
@@ -635,6 +664,7 @@
 				96CB24AC1C9FF9F800949526 /* DS_18584.jpg in Resources */,
 				96CB24A51C9FF9F800949526 /* DS_18565.jpg in Resources */,
 				96CB24991C9FF9F800949526 /* DS_18485.jpg in Resources */,
+				963FA4531CB0E40200409B87 /* bookYellow.png in Resources */,
 				96CB24801C9FF9F800949526 /* DS_18327.jpg in Resources */,
 				96CB24841C9FF9F800949526 /* DS_18357.jpg in Resources */,
 				96CB24951C9FF9F800949526 /* DS_18465.jpg in Resources */,
@@ -654,8 +684,10 @@
 				96CB24B51C9FF9F800949526 /* DS_18646.jpg in Resources */,
 				96CB24871C9FF9F800949526 /* DS_18365.jpg in Resources */,
 				96CB24CC1CA055F200949526 /* appIcon~ipad.png in Resources */,
+				963FA4511CB0E40200409B87 /* bookRed.png in Resources */,
 				96CB24CB1CA055F200949526 /* appIcon@2x~ipad.png in Resources */,
 				96CB24831C9FF9F800949526 /* DS_18337.jpg in Resources */,
+				963FA4501CB0E40200409B87 /* bookOrange.png in Resources */,
 				96CB249E1C9FF9F800949526 /* DS_18519.jpg in Resources */,
 				96CB24C01C9FF9F800949526 /* DS_18765.jpg in Resources */,
 				968597951C9C0634003E9D96 /* LaunchScreen.storyboard in Resources */,
