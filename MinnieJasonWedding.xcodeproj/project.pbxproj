@@ -17,6 +17,9 @@
 		963FA4591CB0EEDA00409B87 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA4571CB0EEDA00409B87 /* heart.png */; };
 		963FA45A1CB0EEDA00409B87 /* heartPress.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA4581CB0EEDA00409B87 /* heartPress.png */; };
 		964A61C21CA822A7004D9B7C /* PhoneBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */; };
+		964AF47E1CB11C56006A5BB6 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964AF47D1CB11C56006A5BB6 /* CameraViewController.m */; };
+		964AF4811CB12041006A5BB6 /* MyImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964AF4801CB12041006A5BB6 /* MyImagePickerViewController.m */; };
+		964AF4831CB12A57006A5BB6 /* minnieAndJason.png in Resources */ = {isa = PBXBuildFile; fileRef = 964AF4821CB12A57006A5BB6 /* minnieAndJason.png */; };
 		967B0E621C9FDE440010C612 /* PhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967B0E611C9FDE440010C612 /* PhotoBrowserViewController.m */; };
 		968597871C9C0634003E9D96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597861C9C0634003E9D96 /* main.m */; };
 		9685978A1C9C0634003E9D96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 968597891C9C0634003E9D96 /* AppDelegate.m */; };
@@ -144,6 +147,11 @@
 		963FA4581CB0EEDA00409B87 /* heartPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartPress.png; sourceTree = "<group>"; };
 		964A61C01CA822A7004D9B7C /* PhoneBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookTableViewCell.h; sourceTree = "<group>"; };
 		964A61C11CA822A7004D9B7C /* PhoneBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookTableViewCell.m; sourceTree = "<group>"; };
+		964AF47C1CB11C56006A5BB6 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ViewController/CameraViewController.h; sourceTree = SOURCE_ROOT; };
+		964AF47D1CB11C56006A5BB6 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ViewController/CameraViewController.m; sourceTree = SOURCE_ROOT; };
+		964AF47F1CB12041006A5BB6 /* MyImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyImagePickerViewController.h; path = ViewController/MyImagePickerViewController.h; sourceTree = SOURCE_ROOT; };
+		964AF4801CB12041006A5BB6 /* MyImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyImagePickerViewController.m; path = ViewController/MyImagePickerViewController.m; sourceTree = SOURCE_ROOT; };
+		964AF4821CB12A57006A5BB6 /* minnieAndJason.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minnieAndJason.png; sourceTree = "<group>"; };
 		967B0E601C9FDE440010C612 /* PhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoBrowserViewController.h; path = ViewController/PhotoBrowserViewController.h; sourceTree = SOURCE_ROOT; };
 		967B0E611C9FDE440010C612 /* PhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoBrowserViewController.m; path = ViewController/PhotoBrowserViewController.m; sourceTree = SOURCE_ROOT; };
 		968597821C9C0634003E9D96 /* MinnieJasonWedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinnieJasonWedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,6 +337,10 @@
 				96E302D91CA7B98F002FAF82 /* PhoneBookTableViewController.m */,
 				96D44DD31CAEC55700D7DEED /* HomeViewController.h */,
 				96D44DD41CAEC55700D7DEED /* HomeViewController.m */,
+				964AF47C1CB11C56006A5BB6 /* CameraViewController.h */,
+				964AF47D1CB11C56006A5BB6 /* CameraViewController.m */,
+				964AF47F1CB12041006A5BB6 /* MyImagePickerViewController.h */,
+				964AF4801CB12041006A5BB6 /* MyImagePickerViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -512,6 +524,7 @@
 		96EB9D5C1C9C18FB006E9222 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				964AF4821CB12A57006A5BB6 /* minnieAndJason.png */,
 				963FA4561CB0EECD00409B87 /* cell */,
 				963FA4491CB0E3CF00409B87 /* book */,
 				96CB24CF1CA0589900949526 /* launchScreen.png */,
@@ -719,6 +732,7 @@
 				96CB24E01CA05F9100949526 /* LaunchScreen~ipad.storyboard in Resources */,
 				96CB24961C9FF9F800949526 /* DS_18468.jpg in Resources */,
 				96CB24811C9FF9F800949526 /* DS_18334.jpg in Resources */,
+				964AF4831CB12A57006A5BB6 /* minnieAndJason.png in Resources */,
 				96CB24851C9FF9F800949526 /* DS_18358.jpg in Resources */,
 				96CB249F1C9FF9F800949526 /* DS_18520.jpg in Resources */,
 				96CB24BA1C9FF9F800949526 /* DS_18723.jpg in Resources */,
@@ -808,6 +822,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E751401CAA51DC00A62F1A /* AddStoreDialogView.m in Sources */,
+				964AF4811CB12041006A5BB6 /* MyImagePickerViewController.m in Sources */,
 				967B0E621C9FDE440010C612 /* PhotoBrowserViewController.m in Sources */,
 				9685978D1C9C0634003E9D96 /* ViewController.m in Sources */,
 				96E302E31CA7BF32002FAF82 /* StoreData.m in Sources */,
@@ -816,6 +831,7 @@
 				96D44DD51CAEC55700D7DEED /* HomeViewController.m in Sources */,
 				96E302DA1CA7B98F002FAF82 /* PhoneBookTableViewController.m in Sources */,
 				9685978A1C9C0634003E9D96 /* AppDelegate.m in Sources */,
+				964AF47E1CB11C56006A5BB6 /* CameraViewController.m in Sources */,
 				968597871C9C0634003E9D96 /* main.m in Sources */,
 				96D44DD21CAEB0B700D7DEED /* PhoneBookTableView.m in Sources */,
 			);

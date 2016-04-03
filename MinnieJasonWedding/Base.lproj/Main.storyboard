@@ -175,20 +175,31 @@
             </objects>
             <point key="canvasLocation" x="44" y="1107"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="eKq-3q-V7C">
             <objects>
-                <viewController id="eJq-hQ-zwK" sceneMemberID="viewController">
+                <viewController id="eJq-hQ-zwK" customClass="CameraViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jV7-sn-gXV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="LqX-jM-5uz">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hQy-bB-PXK"/>
+                    <navigationItem key="navigationItem" id="hQy-bB-PXK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="QVN-9E-Glb"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="LqX-jM-5uz" id="7QC-F7-vf5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjS-FM-P88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408" y="698"/>
+            <point key="canvasLocation" x="400" y="698"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="oED-be-0yj">
