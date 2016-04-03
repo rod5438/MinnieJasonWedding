@@ -13,6 +13,7 @@
 @interface CameraViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic) IBOutlet UIImageView *minnieAndJasonImageView;
 
 @end
 
@@ -55,7 +56,7 @@
 - (IBAction)sharePhoro:(id)sender
 {
     // Show activity view controller
-    NSMutableArray *items = [NSMutableArray arrayWithObject:self.imageView.image];
+    NSMutableArray *items = [NSMutableArray arrayWithObject:[self getCombineImage]];
     [items addObject:@"Minnie & jason's wedding"];
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
     // Show
@@ -74,6 +75,21 @@
     }
     [self presentViewController:activityViewController animated:YES completion:nil];
     return;
+}
+
+
+- (UIImage *)getCombineImage
+{
+    UIImage *mainImage = self.imageView.image;
+    UIImage *bindImage = self.minnieAndJasonImageView.image;
+    CGSize finalSize = [mainImage size];
+    CGSize bindSize = [bindImage size];
+    UIGraphicsBeginImageContext(finalSize);
+    [mainImage drawInRect:CGRectMake(0, 0, finalSize.width, finalSize.height)];
+    [bindImage drawInRect:CGRectMake(0, 0, bindSize.width, bindSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 /*

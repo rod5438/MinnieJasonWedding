@@ -187,6 +187,10 @@
                                 <rect key="frame" x="0.0" y="60" width="320" height="508"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minnieAndJason.png" id="CnO-2K-24H">
+                                <rect key="frame" x="195" y="308" width="125" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -199,6 +203,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="LqX-jM-5uz" id="7QC-F7-vf5"/>
+                        <outlet property="minnieAndJasonImageView" destination="CnO-2K-24H" id="SEV-Er-SJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjS-FM-P88" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,7 +220,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="4c6-uZ-2fR" customClass="PhoneBookTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4c6-uZ-2fR" id="Jwl-Tf-TfV">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -478,6 +483,7 @@
         <image name="bookWhite.png" width="320" height="320"/>
         <image name="bookYellow.png" width="320" height="320"/>
         <image name="heart.png" width="96" height="96"/>
+        <image name="minnieAndJason.png" width="320" height="568"/>
         <image name="一家餐廳.jpg" width="480" height="360"/>
         <image name="儷宴會館.jpg" width="600" height="399"/>
     </resources>
