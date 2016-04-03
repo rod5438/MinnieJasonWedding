@@ -30,21 +30,25 @@
     if ([segue.identifier isEqualToString:@"StoreTypeDress"]) {
         PhoneBookTableViewController *dst = (PhoneBookTableViewController *)segue.destinationViewController;
         dst.type = StoreTypeDress;
+        dst.title = @"婚紗公司";
         return;
     }
     if ([segue.identifier isEqualToString:@"StoreTypePhoto"]) {
         PhoneBookTableViewController *dst = (PhoneBookTableViewController *)segue.destinationViewController;
         dst.type = StoreTypePhoto;
+        dst.title = @"攝影公司";
         return;
     }
     if ([segue.identifier isEqualToString:@"StoreTypePrint"]) {
         PhoneBookTableViewController *dst = (PhoneBookTableViewController *)segue.destinationViewController;
         dst.type = StoreTypePrint;
+        dst.title = @"喜帖印刷";
         return;
     }
     if ([segue.identifier isEqualToString:@"StoreTypeRestaurant"]) {
         PhoneBookTableViewController *dst = (PhoneBookTableViewController *)segue.destinationViewController;
         dst.type = StoreTypeRestaurant;
+        dst.title = @"喜宴餐廳";
         return;
     }
 }
