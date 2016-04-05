@@ -7,6 +7,7 @@
 //
 
 #import "MyImagePickerViewController.h"
+#import "PreviewView.h"
 
 @interface MyImagePickerViewController ()
 

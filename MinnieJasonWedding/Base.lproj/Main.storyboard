@@ -183,32 +183,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="LqX-jM-5uz">
-                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="saM-cT-HjO" customClass="PreviewView">
+                                <rect key="frame" x="0.0" y="90" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minnieAndJason.png" id="CnO-2K-24H">
+                                <rect key="frame" x="0.0" y="90" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minnieAndJason.png" id="CnO-2K-24H">
-                                <rect key="frame" x="195" y="308" width="125" height="260"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cxj-hv-jxe">
+                                <rect key="frame" x="207" y="476" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="Switch Cam"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eOw-if-D6z">
+                                <rect key="frame" x="122" y="476" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Capture"/>
+                                <connections>
+                                    <action selector="snapStillImage:" destination="eJq-hQ-zwK" eventType="touchUpInside" id="qDT-X9-frp"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hQy-bB-PXK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="QVN-9E-Glb">
-                            <connections>
-                                <action selector="sharePhoro:" destination="eJq-hQ-zwK" id="Rue-bI-YBP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="hQy-bB-PXK"/>
                     <connections>
-                        <outlet property="imageView" destination="LqX-jM-5uz" id="7QC-F7-vf5"/>
                         <outlet property="minnieAndJasonImageView" destination="CnO-2K-24H" id="SEV-Er-SJX"/>
+                        <outlet property="previewView" destination="saM-cT-HjO" id="G70-mq-IcK"/>
+                        <segue destination="MXv-o0-C7I" kind="push" identifier="Share" id="FMM-Ev-eZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjS-FM-P88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="698"/>
+            <point key="canvasLocation" x="408" y="698"/>
+        </scene>
+        <!--Share View Controller-->
+        <scene sceneID="NUY-6C-r9l">
+            <objects>
+                <viewController id="MXv-o0-C7I" customClass="ShareViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pJt-ws-Tpq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qcQ-ae-7Rh">
+                                <rect key="frame" x="0.0" y="90" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R2w-vp-cHL">
+                        <barButtonItem key="leftBarButtonItem" title="再拍一次" id="yxk-hX-87K">
+                            <connections>
+                                <action selector="back:" destination="MXv-o0-C7I" id="YE8-zD-lYE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="ybr-IX-abB">
+                            <connections>
+                                <action selector="share:" destination="MXv-o0-C7I" id="gDG-jU-3NY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareImageView" destination="qcQ-ae-7Rh" id="nl7-iL-JLO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAV-QF-PDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="698"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="oED-be-0yj">
@@ -483,7 +526,7 @@
         <image name="bookWhite.png" width="320" height="320"/>
         <image name="bookYellow.png" width="320" height="320"/>
         <image name="heart.png" width="96" height="96"/>
-        <image name="minnieAndJason.png" width="320" height="568"/>
+        <image name="minnieAndJason.png" width="1024" height="1024"/>
         <image name="一家餐廳.jpg" width="480" height="360"/>
         <image name="儷宴會館.jpg" width="600" height="399"/>
     </resources>
