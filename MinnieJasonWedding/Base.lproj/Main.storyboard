@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--台北結婚資訊-->
@@ -543,6 +544,9 @@
                                 <rect key="frame" x="207" y="476" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Switch Cam"/>
+                                <connections>
+                                    <action selector="changeCamera:" destination="eJq-hQ-zwK" eventType="touchUpInside" id="BaA-CV-Mz8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eOw-if-D6z">
                                 <rect key="frame" x="122" y="476" width="77" height="30"/>
@@ -582,16 +586,23 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="R2w-vp-cHL">
-                        <barButtonItem key="leftBarButtonItem" title="再拍一次" id="yxk-hX-87K">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="yxk-hX-87K">
                             <connections>
                                 <action selector="back:" destination="MXv-o0-C7I" id="YE8-zD-lYE"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="ybr-IX-abB">
-                            <connections>
-                                <action selector="share:" destination="MXv-o0-C7I" id="gDG-jU-3NY"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="ybr-IX-abB">
+                                <connections>
+                                    <action selector="share:" destination="MXv-o0-C7I" id="gDG-jU-3NY"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="save" id="Z2M-o0-u6z">
+                                <connections>
+                                    <action selector="savePhoto:" destination="MXv-o0-C7I" id="MqV-hc-nqU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="shareImageView" destination="qcQ-ae-7Rh" id="nl7-iL-JLO"/>

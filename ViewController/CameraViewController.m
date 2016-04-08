@@ -127,6 +127,14 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
         AVCaptureDevice *videoDevice = [[self class] deviceWithMediaType:AVMediaTypeVideo preferringPosition:AVCaptureDevicePositionFront];
         AVCaptureDeviceInput *videoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
         
+        
+        
+        self.minnieAndJasonImage = self.minnieAndJasonImageView.image;
+        self.minnieAndJasonImageFlip = [UIImage imageWithCGImage:self.minnieAndJasonImageView.image.CGImage scale:1.0f orientation:UIImageOrientationUpMirrored];
+        [self updateminnieAndJasonImage];
+        
+        
+        
         if (!videoDeviceInput) {
             NSLog( @"Could not create video device input: %@", error );
         }
@@ -179,11 +187,22 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
         
         [self.previewView.session commitConfiguration];
     } );
-    
-    
-    self.minnieAndJasonImage = self.minnieAndJasonImageView.image;
-    self.minnieAndJasonImageFlip = [UIImage imageWithCGImage:self.minnieAndJasonImageView.image.CGImage scale:1.0f orientation:UIImageOrientationUpMirrored];
-    self.minnieAndJasonImageView.image = self.minnieAndJasonImageFlip;
+}
+
+- (void)updateminnieAndJasonImage
+{
+    AVCaptureDevice *currentVideoDevice = self.videoDeviceInput.device;
+    AVCaptureDevicePosition currentPosition = currentVideoDevice.position;
+    switch (currentPosition)
+    {
+        case AVCaptureDevicePositionUnspecified:
+        case AVCaptureDevicePositionFront:
+            self.minnieAndJasonImageView.image = self.minnieAndJasonImageFlip;
+            break;
+        case AVCaptureDevicePositionBack:
+            self.minnieAndJasonImageView.image = self.minnieAndJasonImage;
+            break;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -242,6 +261,57 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)changeCamera:(id)sender
+{
+    dispatch_async( self.sessionQueue, ^{
+        AVCaptureDevice *currentVideoDevice = self.videoDeviceInput.device;
+        AVCaptureDevicePosition preferredPosition = AVCaptureDevicePositionUnspecified;
+        AVCaptureDevicePosition currentPosition = currentVideoDevice.position;
+        
+        switch (currentPosition)
+        {
+            case AVCaptureDevicePositionUnspecified:
+            case AVCaptureDevicePositionFront:
+                preferredPosition = AVCaptureDevicePositionBack;
+                break;
+            case AVCaptureDevicePositionBack:
+                preferredPosition = AVCaptureDevicePositionFront;
+                break;
+        }
+        
+        AVCaptureDevice *videoDevice = [[self class] deviceWithMediaType:AVMediaTypeVideo preferringPosition:preferredPosition];
+        AVCaptureDeviceInput *videoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:nil];
+        
+        [self.previewView.session beginConfiguration];
+        
+        // Remove the existing device input first, since using the front and back camera simultaneously is not supported.
+        [self.previewView.session removeInput:self.videoDeviceInput];
+        
+        if ( [self.previewView.session canAddInput:videoDeviceInput] ) {
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:AVCaptureDeviceSubjectAreaDidChangeNotification object:currentVideoDevice];
+            
+            [[self class] setFlashMode:AVCaptureFlashModeAuto forDevice:videoDevice];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(subjectAreaDidChange:) name:AVCaptureDeviceSubjectAreaDidChangeNotification object:videoDevice];
+            
+            [self.previewView.session addInput:videoDeviceInput];
+            self.videoDeviceInput = videoDeviceInput;
+        }
+        else {
+            [self.previewView.session addInput:self.videoDeviceInput];
+        }
+        
+        AVCaptureConnection *connection = [self.movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
+        if ( connection.isVideoStabilizationSupported ) {
+            connection.preferredVideoStabilizationMode = AVCaptureVideoStabilizationModeAuto;
+        }
+        
+        [self.previewView.session commitConfiguration];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateminnieAndJasonImage];
+        });
+    } );
 }
 
 - (IBAction)snapStillImage:(id)sender

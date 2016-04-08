@@ -708,11 +708,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ViewController/CameraViewController.m"
-            timestampString = "481570003.557243"
+            timestampString = "481822878.277416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
@@ -804,11 +804,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ViewController/CameraViewController.m"
-            timestampString = "481570003.557243"
+            timestampString = "481822878.277416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -820,11 +820,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ViewController/CameraViewController.m"
-            timestampString = "481570003.557243"
+            timestampString = "481822878.277416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -832,15 +832,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ViewController/CameraViewController.m"
-            timestampString = "481570003.557243"
+            timestampString = "481822878.277416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "363"
+            endingLineNumber = "363"
             landmarkName = "-processToSquareWithImage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -848,32 +848,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ViewController/CameraViewController.m"
-            timestampString = "481570003.557243"
+            timestampString = "481822878.277416"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewController/CameraViewController.m"
-            timestampString = "481570003.557243"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -883,13 +867,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ViewController/CameraViewController.m"
-            timestampString = "481570487.305335"
+            filePath = "ViewController/ShareViewController.m"
+            timestampString = "481823591.348807"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
-            landmarkName = "-prepareForSegue:sender:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-savePhoto:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Toast/Toast/Toast/UIView+Toast.m"
+            timestampString = "481823606.098604"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-showToast:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/ShareViewController.m"
+            timestampString = "481823818.756493"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-image:didFinishSavingWithError:contextInfo:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/ShareViewController.m"
+            timestampString = "481824020.567401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-share:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

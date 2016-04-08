@@ -28,6 +28,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)savePhoto:(id)sender
+{
+    UIImageWriteToSavedPhotosAlbum(self.shareImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    [self.view makeToast:@"已儲存" duration:1.0f position:CSToastPositionCenter];
+}
+
 - (IBAction)share:(id)sender
 {
     // Show activity view controller
