@@ -13,6 +13,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEditing:)];
     [self addGestureRecognizer:gestureRecognizer];
 }
