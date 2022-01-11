@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AppsFlyerLib shared].isDebug = true;
+    [[AppsFlyerLib shared] setAppsFlyerDevKey:@"6ZnqJDgzoM8wA8FbDEWquM"];
+    [[AppsFlyerLib shared] setAppleAppID:@"id1094652396"];
+    [AppsFlyerLib shared].delegate = self;
+    [[AppsFlyerLib shared] waitForATTUserAuthorizationWithTimeoutInterval:60];
     return YES;
 }
 
@@ -36,10 +41,28 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[AppsFlyerLib shared] startWithCompletionHandler:^(NSDictionary<NSString *,id> *dictionary, NSError *error) {
+            if (error) {
+                NSLog(@"%@", error);
+                return;
+            }
+            if (dictionary) {
+                NSLog(@"%@", dictionary);
+                return;
+            }
+        }];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)onConversionDataFail:(nonnull NSError *)error {
+    
+}
+
+- (void)onConversionDataSuccess:(nonnull NSDictionary *)conversionInfo {
+    
 }
 
 @end

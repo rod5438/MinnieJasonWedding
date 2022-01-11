@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "PhoneBookTableViewController.h"
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 @interface HomeViewController ()
 
@@ -17,7 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view, typically from a nib.
+    if (@available(iOS 14, *)) {
+      [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+        NSLog(@"Status: %lu", (unsigned long)status);
+      }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

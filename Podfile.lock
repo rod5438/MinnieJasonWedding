@@ -1,10 +1,13 @@
 PODS:
+  - AppsFlyerFramework (6.5.1):
+    - AppsFlyerFramework/Main (= 6.5.1)
+  - AppsFlyerFramework/Main (6.5.1)
   - DACircularProgress (2.3.1)
   - MBProgressHUD (0.9.2)
   - MWPhotoBrowser (2.1.1):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
-    - SDWebImage (!= 3.7.2, ~> 3.7)
+    - "SDWebImage (!= 3.7.2, ~> 3.7)"
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -18,11 +21,23 @@ PODS:
   - Toast (3.0)
 
 DEPENDENCIES:
+  - AppsFlyerFramework
   - MWPhotoBrowser
   - ReactiveCocoa
   - Toast
 
+SPEC REPOS:
+  trunk:
+    - AppsFlyerFramework
+    - DACircularProgress
+    - MBProgressHUD
+    - MWPhotoBrowser
+    - ReactiveCocoa
+    - SDWebImage
+    - Toast
+
 SPEC CHECKSUMS:
+  AppsFlyerFramework: 78311a699dd031f8a74648326ebc704752764694
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
@@ -30,4 +45,6 @@ SPEC CHECKSUMS:
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   Toast: 32c59229abfcf41850162b83bb9259dc84372473
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 7f8a5f2daa7e428b1672c24d42754ea84aa2afe6
+
+COCOAPODS: 1.10.1

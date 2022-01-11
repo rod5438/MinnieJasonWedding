@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2492989FB55827D890F5958C /* libPods-MinnieJasonWedding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */; };
+		063B82354D34D23A7DBC0A92 /* libPods-MinnieJasonWeddingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9922AF3BE214061D1CE95F0 /* libPods-MinnieJasonWeddingUITests.a */; };
+		338ED80F62724E674D14B914 /* libPods-MinnieJasonWeddingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6889F8196A9D6B504BC8CA21 /* libPods-MinnieJasonWeddingTests.a */; };
+		56BB1E6A6D644A4655D84C94 /* libPods-MinnieJasonWedding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 432D9BF25059DC84529F4DF8 /* libPods-MinnieJasonWedding.a */; };
 		963FA44F1CB0E40200409B87 /* bookGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44A1CB0E40200409B87 /* bookGreen.png */; };
 		963FA4501CB0E40200409B87 /* bookOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44B1CB0E40200409B87 /* bookOrange.png */; };
 		963FA4511CB0E40200409B87 /* bookRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 963FA44C1CB0E40200409B87 /* bookRed.png */; };
@@ -136,9 +138,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MinnieJasonWedding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		50F425038A214AE0346ADF83 /* Pods-MinnieJasonWedding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.debug.xcconfig"; sourceTree = "<group>"; };
-		9030F55F0FD8385050D449F2 /* Pods-MinnieJasonWedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.release.xcconfig"; sourceTree = "<group>"; };
+		21A308BCA727962A946BB70D /* Pods-MinnieJasonWeddingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWeddingUITests.release.xcconfig"; path = "Target Support Files/Pods-MinnieJasonWeddingUITests/Pods-MinnieJasonWeddingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		432D9BF25059DC84529F4DF8 /* libPods-MinnieJasonWedding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MinnieJasonWedding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5172E61D03B43D938EA1B81A /* Pods-MinnieJasonWeddingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWeddingUITests.debug.xcconfig"; path = "Target Support Files/Pods-MinnieJasonWeddingUITests/Pods-MinnieJasonWeddingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5395B2007C10DED43B8CB655 /* Pods-MinnieJasonWedding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.debug.xcconfig"; path = "Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.debug.xcconfig"; sourceTree = "<group>"; };
+		6889F8196A9D6B504BC8CA21 /* libPods-MinnieJasonWeddingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MinnieJasonWeddingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C451B04487B481F8A8BC753 /* Pods-MinnieJasonWedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWedding.release.xcconfig"; path = "Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding.release.xcconfig"; sourceTree = "<group>"; };
 		963FA44A1CB0E40200409B87 /* bookGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookGreen.png; sourceTree = "<group>"; };
 		963FA44B1CB0E40200409B87 /* bookOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookOrange.png; sourceTree = "<group>"; };
 		963FA44C1CB0E40200409B87 /* bookRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookRed.png; sourceTree = "<group>"; };
@@ -267,6 +272,9 @@
 		96E7513F1CAA51DC00A62F1A /* AddStoreDialogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreDialogView.m; sourceTree = "<group>"; };
 		96EB9D5D1C9C18FB006E9222 /* 一家餐廳.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "一家餐廳.jpg"; sourceTree = "<group>"; };
 		96EB9D5E1C9C18FB006E9222 /* 儷宴會館.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "儷宴會館.jpg"; sourceTree = "<group>"; };
+		D928C16EAD371129B7D0C293 /* Pods-MinnieJasonWeddingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWeddingTests.debug.xcconfig"; path = "Target Support Files/Pods-MinnieJasonWeddingTests/Pods-MinnieJasonWeddingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9922AF3BE214061D1CE95F0 /* libPods-MinnieJasonWeddingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MinnieJasonWeddingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB48D7C6EDCEA6A9176493D7 /* Pods-MinnieJasonWeddingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinnieJasonWeddingTests.release.xcconfig"; path = "Target Support Files/Pods-MinnieJasonWeddingTests/Pods-MinnieJasonWeddingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2492989FB55827D890F5958C /* libPods-MinnieJasonWedding.a in Frameworks */,
+				56BB1E6A6D644A4655D84C94 /* libPods-MinnieJasonWedding.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338ED80F62724E674D14B914 /* libPods-MinnieJasonWeddingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,20 +298,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063B82354D34D23A7DBC0A92 /* libPods-MinnieJasonWeddingUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		721F1E1091E72A936121CEBC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				336FA3EFD9CBFB94A9BA32EE /* libPods-MinnieJasonWedding.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		963FA4491CB0E3CF00409B87 /* book */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,8 +362,8 @@
 				9685979E1C9C0634003E9D96 /* MinnieJasonWeddingTests */,
 				968597A91C9C0634003E9D96 /* MinnieJasonWeddingUITests */,
 				968597831C9C0634003E9D96 /* Products */,
-				E5EFEEB028CFCE9679B3C3CD /* Pods */,
-				721F1E1091E72A936121CEBC /* Frameworks */,
+				BE5F359DECFECDC371870152 /* Pods */,
+				B189AEA54C7651FD0725AAAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -552,13 +554,27 @@
 			path = image;
 			sourceTree = SOURCE_ROOT;
 		};
-		E5EFEEB028CFCE9679B3C3CD /* Pods */ = {
+		B189AEA54C7651FD0725AAAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50F425038A214AE0346ADF83 /* Pods-MinnieJasonWedding.debug.xcconfig */,
-				9030F55F0FD8385050D449F2 /* Pods-MinnieJasonWedding.release.xcconfig */,
+				432D9BF25059DC84529F4DF8 /* libPods-MinnieJasonWedding.a */,
+				6889F8196A9D6B504BC8CA21 /* libPods-MinnieJasonWeddingTests.a */,
+				E9922AF3BE214061D1CE95F0 /* libPods-MinnieJasonWeddingUITests.a */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE5F359DECFECDC371870152 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5395B2007C10DED43B8CB655 /* Pods-MinnieJasonWedding.debug.xcconfig */,
+				6C451B04487B481F8A8BC753 /* Pods-MinnieJasonWedding.release.xcconfig */,
+				D928C16EAD371129B7D0C293 /* Pods-MinnieJasonWeddingTests.debug.xcconfig */,
+				EB48D7C6EDCEA6A9176493D7 /* Pods-MinnieJasonWeddingTests.release.xcconfig */,
+				5172E61D03B43D938EA1B81A /* Pods-MinnieJasonWeddingUITests.debug.xcconfig */,
+				21A308BCA727962A946BB70D /* Pods-MinnieJasonWeddingUITests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,12 +584,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 968597AF1C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWedding" */;
 			buildPhases = (
-				A9EEC817FECBF28AB741CA42 /* Check Pods Manifest.lock */,
+				2C385CC355FCCF9A3FEA5B6E /* [CP] Check Pods Manifest.lock */,
 				9685977E1C9C0634003E9D96 /* Sources */,
 				9685977F1C9C0634003E9D96 /* Frameworks */,
 				968597801C9C0634003E9D96 /* Resources */,
-				8F15FDAA88620D31A44D8DB7 /* Embed Pods Frameworks */,
-				F00439932A1A40171C7C5FB5 /* Copy Pods Resources */,
+				A0DE267DF7EF15103F8D7379 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -588,6 +603,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 968597B21C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWeddingTests" */;
 			buildPhases = (
+				96B3877E9F8BE0D855746F6C /* [CP] Check Pods Manifest.lock */,
 				968597971C9C0634003E9D96 /* Sources */,
 				968597981C9C0634003E9D96 /* Frameworks */,
 				968597991C9C0634003E9D96 /* Resources */,
@@ -606,6 +622,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 968597B51C9C0634003E9D96 /* Build configuration list for PBXNativeTarget "MinnieJasonWeddingUITests" */;
 			buildPhases = (
+				32B2FDE73CBD9A8EE67065AD /* [CP] Check Pods Manifest.lock */,
 				968597A21C9C0634003E9D96 /* Sources */,
 				968597A31C9C0634003E9D96 /* Frameworks */,
 				968597A41C9C0634003E9D96 /* Resources */,
@@ -780,49 +797,88 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8F15FDAA88620D31A44D8DB7 /* Embed Pods Frameworks */ = {
+		2C385CC355FCCF9A3FEA5B6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinnieJasonWedding-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A9EEC817FECBF28AB741CA42 /* Check Pods Manifest.lock */ = {
+		32B2FDE73CBD9A8EE67065AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinnieJasonWeddingUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F00439932A1A40171C7C5FB5 /* Copy Pods Resources */ = {
+		96B3877E9F8BE0D855746F6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinnieJasonWeddingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0DE267DF7EF15103F8D7379 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MWPhotoBrowser/MWPhotoBrowser.bundle",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MWPhotoBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MinnieJasonWedding/Pods-MinnieJasonWedding-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1000,14 +1056,15 @@
 		};
 		968597B01C9C0634003E9D96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50F425038A214AE0346ADF83 /* Pods-MinnieJasonWedding.debug.xcconfig */;
+			baseConfigurationReference = 5395B2007C10DED43B8CB655 /* Pods-MinnieJasonWedding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = MinnieJasonWedding/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = MinnieJasonWedding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1016,14 +1073,15 @@
 		};
 		968597B11C9C0634003E9D96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9030F55F0FD8385050D449F2 /* Pods-MinnieJasonWedding.release.xcconfig */;
+			baseConfigurationReference = 6C451B04487B481F8A8BC753 /* Pods-MinnieJasonWedding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = MinnieJasonWedding/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = MinnieJasonWedding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1032,6 +1090,7 @@
 		};
 		968597B31C9C0634003E9D96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D928C16EAD371129B7D0C293 /* Pods-MinnieJasonWeddingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MinnieJasonWeddingTests/Info.plist;
@@ -1044,6 +1103,7 @@
 		};
 		968597B41C9C0634003E9D96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB48D7C6EDCEA6A9176493D7 /* Pods-MinnieJasonWeddingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MinnieJasonWeddingTests/Info.plist;
@@ -1056,6 +1116,7 @@
 		};
 		968597B61C9C0634003E9D96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5172E61D03B43D938EA1B81A /* Pods-MinnieJasonWeddingUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MinnieJasonWeddingUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1068,6 +1129,7 @@
 		};
 		968597B71C9C0634003E9D96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21A308BCA727962A946BB70D /* Pods-MinnieJasonWeddingUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MinnieJasonWeddingUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

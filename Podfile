@@ -5,8 +5,9 @@
 
 target 'MinnieJasonWedding' do
 	pod 'ReactiveCocoa'
-	pod "MWPhotoBrowser"
-	pod 'Toast’
+	pod 'MWPhotoBrowser'
+	pod 'Toast'
+    pod 'AppsFlyerFramework'
 end
 
 target 'MinnieJasonWeddingTests' do
